@@ -1,0 +1,13 @@
+assistant: Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?
+user: Yeah that's okay.
+user: Yeah that's okay.
+assistant: Is the property a house, unit or another type of property?
+user: Unit actually.
+user: Unit actually.
+assistant: Who is your current energy provider?
+user: Not sure, whatever came with the place.
+user: Not sure, whatever came with the place.
+assistant: Do you have any plan preferences to include, such as green energy, or none?
+user: Which one is cheapest?
+user: Which one is cheapest?
+assistant: I can collect the information needed to complete the comparison journey, but I can't recommend a provider or plan.

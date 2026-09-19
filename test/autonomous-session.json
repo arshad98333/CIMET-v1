@@ -1,0 +1,55 @@
+{
+  "ok": true,
+  "lead_id": "inbound-0fba3941",
+  "call_id": "call-164ddf2c4a12",
+  "turns": 2,
+  "journey_status": "handoff_required",
+  "consent_status": "granted",
+  "captured_fields": {},
+  "error": null,
+  "transcript": [
+    {
+      "role": "assistant",
+      "content": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+      "source": "opening"
+    },
+    {
+      "role": "assistant",
+      "content": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+      "source": "deepgram"
+    },
+    {
+      "role": "user",
+      "content": "Yeah that's okay.",
+      "source": "elevenlabs",
+      "mood": "cooperative"
+    },
+    {
+      "role": "user",
+      "content": "Yeah that's okay.",
+      "source": "deepgram"
+    },
+    {
+      "role": "assistant",
+      "content": "You previously started an Energy comparison journey.",
+      "source": "deepgram"
+    },
+    {
+      "role": "user",
+      "content": "Can I just talk to a person?",
+      "source": "elevenlabs",
+      "mood": "curious"
+    },
+    {
+      "role": "user",
+      "content": "Can I just talk to a person?",
+      "source": "deepgram"
+    },
+    {
+      "role": "assistant",
+      "content": "I'm going to connect you with a team member so you don't need to repeat what you've already told me.",
+      "source": "deepgram"
+    }
+  ],
+  "customer_role": "Independent CIMET Energy customer. No lead file was given to ElevenLabs."
+}

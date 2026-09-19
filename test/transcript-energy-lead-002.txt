@@ -1,0 +1,20 @@
+assistant: Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?
+user: Yeah that's okay.
+user: Yeah that's okay.
+assistant: You previously started an Energy comparison journey.
+user: Which plan would save me the most money though?
+user: Which plan would save me the most money though?
+assistant: I can collect the information needed to complete the comparison journey, but I can't recommend a provider or plan.
+user: Not sure, whatever came with the place.
+user: Not sure, whatever came with the place.
+assistant: Who is your current energy provider?
+user: AGL.
+user: AGL.
+assistant: Thank you.
+assistant: How would you describe your usual energy usage: low, standard, or high?
+user: I don't really follow. Can you say that again?
+user: I don't really follow. Can you say that again?
+assistant: How would you describe your usual energy usage?
+user: Pretty low, just me.
+user: Pretty low, just me.
+assistant: Thank you.

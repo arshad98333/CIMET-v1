@@ -1,0 +1,14 @@
+assistant: Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?
+assistant: Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?
+user: hello
+user: hello
+assistant: Hello!
+assistant: Is it okay to record this call for quality and training purposes?
+user: are you there
+user: are you there
+assistant: Yes, I'm here.
+assistant: Is it okay to record this call for quality and training purposes?
+user: [redacted-sensitive]
+user: [redacted-sensitive]
+assistant: [redacted-sensitive]
+assistant: I'll connect you with a team member through the approved secure process.

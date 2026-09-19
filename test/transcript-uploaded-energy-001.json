@@ -1,0 +1,97 @@
+[
+  {
+    "role": "assistant",
+    "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+    "source": "browser_opening"
+  },
+  {
+    "role": "user",
+    "text": "I have a couple of questions first, who are you and why are you calling?",
+    "source": "browser_customer"
+  },
+  {
+    "role": "assistant",
+    "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+    "source": "browser_deepgram"
+  },
+  {
+    "role": "assistant",
+    "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+    "source": "browser_opening"
+  },
+  {
+    "role": "assistant",
+    "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+    "source": "browser_deepgram"
+  },
+  {
+    "role": "user",
+    "text": "ok you can record",
+    "source": "browser_customer"
+  },
+  {
+    "role": "assistant",
+    "text": "Thank you for that.",
+    "source": "browser_deepgram"
+  },
+  {
+    "role": "assistant",
+    "text": "You previously started an Energy comparison journey.",
+    "source": "browser_deepgram"
+  },
+  {
+    "role": "assistant",
+    "text": "I can help complete the remaining questions.",
+    "source": "browser_deepgram"
+  },
+  {
+    "role": "assistant",
+    "text": "Is that right?",
+    "source": "browser_deepgram"
+  },
+  {
+    "role": "user",
+    "text": "please proceed",
+    "source": "browser_customer"
+  },
+  {
+    "role": "assistant",
+    "text": "I have the following details captured: \n\n- Postcode: 3000\n- Property type: house\n- Current provider: Origin\n- Usage pattern: standard\n- Plan preferences: green if simple\n\nIs that correct?",
+    "source": "browser_deepgram"
+  },
+  {
+    "role": "user",
+    "text": "it is correct",
+    "source": "browser_customer"
+  },
+  {
+    "role": "assistant",
+    "text": "Great!",
+    "source": "browser_deepgram"
+  },
+  {
+    "role": "assistant",
+    "text": "I will now submit the test Energy journey.",
+    "source": "browser_deepgram"
+  },
+  {
+    "role": "assistant",
+    "text": "Please stay on the line.",
+    "source": "browser_deepgram"
+  },
+  {
+    "role": "assistant",
+    "text": "Your Energy journey has been completed using the test information provided.",
+    "source": "browser_deepgram"
+  },
+  {
+    "role": "assistant",
+    "text": "Thank you for your time!",
+    "source": "browser_deepgram"
+  },
+  {
+    "role": "assistant",
+    "text": "If you have any further questions or need assistance, feel free to ask.",
+    "source": "browser_deepgram"
+  }
+]

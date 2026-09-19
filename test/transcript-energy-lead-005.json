@@ -1,0 +1,67 @@
+[
+  {
+    "role": "assistant",
+    "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+    "source": "autonomous"
+  },
+  {
+    "role": "user",
+    "text": "Yeah that's okay.",
+    "source": "elevenlabs"
+  },
+  {
+    "role": "user",
+    "text": "Yeah that's okay.",
+    "source": "autonomous"
+  },
+  {
+    "role": "assistant",
+    "text": "Is the property a house, unit or another type of property?",
+    "source": "autonomous"
+  },
+  {
+    "role": "user",
+    "text": "Unit actually.",
+    "source": "elevenlabs"
+  },
+  {
+    "role": "user",
+    "text": "Unit actually.",
+    "source": "autonomous"
+  },
+  {
+    "role": "assistant",
+    "text": "Who is your current energy provider?",
+    "source": "autonomous"
+  },
+  {
+    "role": "user",
+    "text": "Not sure, whatever came with the place.",
+    "source": "elevenlabs"
+  },
+  {
+    "role": "user",
+    "text": "Not sure, whatever came with the place.",
+    "source": "autonomous"
+  },
+  {
+    "role": "assistant",
+    "text": "Do you have any plan preferences to include, such as green energy, or none?",
+    "source": "autonomous"
+  },
+  {
+    "role": "user",
+    "text": "Which one is cheapest?",
+    "source": "elevenlabs"
+  },
+  {
+    "role": "user",
+    "text": "Which one is cheapest?",
+    "source": "autonomous"
+  },
+  {
+    "role": "assistant",
+    "text": "I can collect the information needed to complete the comparison journey, but I can't recommend a provider or plan.",
+    "source": "autonomous"
+  }
+]

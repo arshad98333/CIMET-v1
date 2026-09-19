@@ -1,0 +1,126 @@
+{"call_id": "call-3697a2c781fa", "lead_id": "energy-lead-001", "role": "assistant", "content": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?", "source": "autonomous"}
+{"call_id": "call-3697a2c781fa", "lead_id": "energy-lead-001", "role": "user", "content": "Yeah that's okay.", "source": "elevenlabs"}
+{"call_id": "call-3697a2c781fa", "lead_id": "energy-lead-001", "role": "user", "content": "No, I don't want to be recorded.", "source": "elevenlabs"}
+{"call_id": "call-a0811765aa39", "lead_id": "energy-lead-001", "role": "assistant", "content": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?", "source": "autonomous"}
+{"call_id": "call-a0811765aa39", "lead_id": "energy-lead-001", "role": "user", "content": "Yeah that's okay.", "source": "elevenlabs"}
+{"call_id": "call-a0811765aa39", "lead_id": "energy-lead-001", "role": "user", "content": "Yeah that's okay.", "source": "autonomous"}
+{"call_id": "call-a0811765aa39", "lead_id": "energy-lead-001", "role": "assistant", "content": "You previously started an Energy comparison journey.", "source": "autonomous"}
+{"call_id": "call-a0811765aa39", "lead_id": "energy-lead-001", "role": "user", "content": "Can I just talk to a person?", "source": "elevenlabs"}
+{"call_id": "call-a0811765aa39", "lead_id": "energy-lead-001", "role": "user", "content": "Can I just talk to a person?", "source": "autonomous"}
+{"call_id": "call-a0811765aa39", "lead_id": "energy-lead-001", "role": "assistant", "content": "I'm going to connect you with a team member so you don't need to repeat what you've already told me.", "source": "autonomous"}
+{"call_id": "call-913f1aee1543", "lead_id": "energy-lead-002", "role": "assistant", "content": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?", "source": "autonomous"}
+{"call_id": "call-913f1aee1543", "lead_id": "energy-lead-002", "role": "user", "content": "Yeah that's okay.", "source": "elevenlabs"}
+{"call_id": "call-913f1aee1543", "lead_id": "energy-lead-002", "role": "user", "content": "Yeah that's okay.", "source": "autonomous"}
+{"call_id": "call-913f1aee1543", "lead_id": "energy-lead-002", "role": "assistant", "content": "You previously started an Energy comparison journey.", "source": "autonomous"}
+{"call_id": "call-913f1aee1543", "lead_id": "energy-lead-002", "role": "user", "content": "Which plan would save me the most money though?", "source": "elevenlabs"}
+{"call_id": "call-913f1aee1543", "lead_id": "energy-lead-002", "role": "user", "content": "Which plan would save me the most money though?", "source": "autonomous"}
+{"call_id": "call-913f1aee1543", "lead_id": "energy-lead-002", "role": "assistant", "content": "I can collect the information needed to complete the comparison journey, but I can't recommend a provider or plan.", "source": "autonomous"}
+{"call_id": "call-913f1aee1543", "lead_id": "energy-lead-002", "role": "user", "content": "Not sure, whatever came with the place.", "source": "elevenlabs"}
+{"call_id": "call-913f1aee1543", "lead_id": "energy-lead-002", "role": "user", "content": "Not sure, whatever came with the place.", "source": "autonomous"}
+{"call_id": "call-913f1aee1543", "lead_id": "energy-lead-002", "role": "assistant", "content": "Who is your current energy provider?", "source": "autonomous"}
+{"call_id": "call-913f1aee1543", "lead_id": "energy-lead-002", "role": "user", "content": "AGL.", "source": "elevenlabs"}
+{"call_id": "call-913f1aee1543", "lead_id": "energy-lead-002", "role": "user", "content": "AGL.", "source": "autonomous"}
+{"call_id": "call-913f1aee1543", "lead_id": "energy-lead-002", "role": "assistant", "content": "Thank you.", "source": "autonomous"}
+{"call_id": "call-913f1aee1543", "lead_id": "energy-lead-002", "role": "assistant", "content": "How would you describe your usual energy usage: low, standard, or high?", "source": "autonomous"}
+{"call_id": "call-913f1aee1543", "lead_id": "energy-lead-002", "role": "user", "content": "I don't really follow. Can you say that again?", "source": "elevenlabs"}
+{"call_id": "call-913f1aee1543", "lead_id": "energy-lead-002", "role": "user", "content": "I don't really follow. Can you say that again?", "source": "autonomous"}
+{"call_id": "call-913f1aee1543", "lead_id": "energy-lead-002", "role": "assistant", "content": "How would you describe your usual energy usage?", "source": "autonomous"}
+{"call_id": "call-913f1aee1543", "lead_id": "energy-lead-002", "role": "user", "content": "Pretty low, just me.", "source": "elevenlabs"}
+{"call_id": "call-913f1aee1543", "lead_id": "energy-lead-002", "role": "user", "content": "Pretty low, just me.", "source": "autonomous"}
+{"call_id": "call-913f1aee1543", "lead_id": "energy-lead-002", "role": "assistant", "content": "Thank you.", "source": "autonomous"}
+{"call_id": "call-2d5b6628c278", "lead_id": "inbound-0fba3941", "role": "assistant", "content": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?", "source": "autonomous"}
+{"call_id": "call-de867def7733", "lead_id": "inbound-0fba3941", "role": "assistant", "content": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?", "source": "autonomous"}
+{"call_id": "call-2d5b6628c278", "lead_id": "inbound-0fba3941", "role": "user", "content": "Yeah that's okay.", "source": "elevenlabs"}
+{"call_id": "call-de867def7733", "lead_id": "inbound-0fba3941", "role": "user", "content": "Yeah that's okay.", "source": "elevenlabs"}
+{"call_id": "call-2d5b6628c278", "lead_id": "inbound-0fba3941", "role": "user", "content": "Yeah that's okay.", "source": "autonomous"}
+{"call_id": "call-de867def7733", "lead_id": "inbound-0fba3941", "role": "user", "content": "Yeah that's okay.", "source": "autonomous"}
+{"call_id": "call-de867def7733", "lead_id": "inbound-0fba3941", "role": "assistant", "content": "You previously started an Energy comparison journey.", "source": "autonomous"}
+{"call_id": "call-de867def7733", "lead_id": "inbound-0fba3941", "role": "user", "content": "Can I just talk to a person?", "source": "elevenlabs"}
+{"call_id": "call-de867def7733", "lead_id": "inbound-0fba3941", "role": "user", "content": "Can I just talk to a person?", "source": "autonomous"}
+{"call_id": "call-de867def7733", "lead_id": "inbound-0fba3941", "role": "assistant", "content": "I'm going to connect you with a team member so you don't need to repeat what you've already told me.", "source": "autonomous"}
+{"call_id": "call-2d5b6628c278", "lead_id": "inbound-0fba3941", "role": "assistant", "content": "I am unable to proceed with this call.", "source": "autonomous"}
+{"call_id": "call-05b5b1b6fd83", "lead_id": "energy-lead-001", "role": "assistant", "content": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?", "source": "autonomous"}
+{"call_id": "call-05b5b1b6fd83", "lead_id": "energy-lead-001", "role": "user", "content": "Yeah that's okay.", "source": "elevenlabs"}
+{"call_id": "call-05b5b1b6fd83", "lead_id": "energy-lead-001", "role": "user", "content": "Yeah that's okay.", "source": "autonomous"}
+{"call_id": "call-05b5b1b6fd83", "lead_id": "energy-lead-001", "role": "assistant", "content": "You previously started an Energy comparison journey.", "source": "autonomous"}
+{"call_id": "call-05b5b1b6fd83", "lead_id": "energy-lead-001", "role": "user", "content": "[redacted-sensitive]", "source": "elevenlabs"}
+{"call_id": "call-05b5b1b6fd83", "lead_id": "energy-lead-001", "role": "assistant", "content": "I can help complete the remaining questions.", "source": "autonomous"}
+{"call_id": "call-58bc8855f16c", "lead_id": "inbound-0fba3941", "role": "assistant", "content": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?", "source": "autonomous"}
+{"call_id": "call-58bc8855f16c", "lead_id": "inbound-0fba3941", "role": "user", "content": "Yeah that's okay.", "source": "elevenlabs"}
+{"call_id": "call-58bc8855f16c", "lead_id": "inbound-0fba3941", "role": "user", "content": "Yeah that's okay.", "source": "autonomous"}
+{"call_id": "call-58bc8855f16c", "lead_id": "inbound-0fba3941", "role": "assistant", "content": "You previously started an Energy comparison journey.", "source": "autonomous"}
+{"call_id": "call-58bc8855f16c", "lead_id": "inbound-0fba3941", "role": "user", "content": "Can I just talk to a person?", "source": "elevenlabs"}
+{"call_id": "call-58bc8855f16c", "lead_id": "inbound-0fba3941", "role": "user", "content": "Can I just talk to a person?", "source": "autonomous"}
+{"call_id": "call-58bc8855f16c", "lead_id": "inbound-0fba3941", "role": "assistant", "content": "I'm going to connect you with a team member so you don't need to repeat what you've already told me.", "source": "autonomous"}
+{"call_id": "call-82cb064be1c7", "lead_id": "energy-lead-005", "role": "assistant", "content": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?", "source": "autonomous"}
+{"call_id": "call-82cb064be1c7", "lead_id": "energy-lead-005", "role": "user", "content": "Yeah that's okay.", "source": "elevenlabs"}
+{"call_id": "call-82cb064be1c7", "lead_id": "energy-lead-005", "role": "user", "content": "Yeah that's okay.", "source": "autonomous"}
+{"call_id": "call-82cb064be1c7", "lead_id": "energy-lead-005", "role": "assistant", "content": "Is the property a house, unit or another type of property?", "source": "autonomous"}
+{"call_id": "call-82cb064be1c7", "lead_id": "energy-lead-005", "role": "user", "content": "Unit actually.", "source": "elevenlabs"}
+{"call_id": "call-82cb064be1c7", "lead_id": "energy-lead-005", "role": "user", "content": "Unit actually.", "source": "autonomous"}
+{"call_id": "call-82cb064be1c7", "lead_id": "energy-lead-005", "role": "assistant", "content": "Who is your current energy provider?", "source": "autonomous"}
+{"call_id": "call-82cb064be1c7", "lead_id": "energy-lead-005", "role": "user", "content": "Not sure, whatever came with the place.", "source": "elevenlabs"}
+{"call_id": "call-82cb064be1c7", "lead_id": "energy-lead-005", "role": "user", "content": "Not sure, whatever came with the place.", "source": "autonomous"}
+{"call_id": "call-82cb064be1c7", "lead_id": "energy-lead-005", "role": "assistant", "content": "Do you have any plan preferences to include, such as green energy, or none?", "source": "autonomous"}
+{"call_id": "call-82cb064be1c7", "lead_id": "energy-lead-005", "role": "user", "content": "Which one is cheapest?", "source": "elevenlabs"}
+{"call_id": "call-82cb064be1c7", "lead_id": "energy-lead-005", "role": "user", "content": "Which one is cheapest?", "source": "autonomous"}
+{"call_id": "call-82cb064be1c7", "lead_id": "energy-lead-005", "role": "assistant", "content": "I can collect the information needed to complete the comparison journey, but I can't recommend a provider or plan.", "source": "autonomous"}
+{"call_id": "call-164ddf2c4a12", "lead_id": "inbound-0fba3941", "role": "assistant", "content": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?", "source": "autonomous"}
+{"call_id": "call-164ddf2c4a12", "lead_id": "inbound-0fba3941", "role": "user", "content": "Yeah that's okay.", "source": "elevenlabs"}
+{"call_id": "call-164ddf2c4a12", "lead_id": "inbound-0fba3941", "role": "user", "content": "Yeah that's okay.", "source": "autonomous"}
+{"call_id": "call-164ddf2c4a12", "lead_id": "inbound-0fba3941", "role": "assistant", "content": "You previously started an Energy comparison journey.", "source": "autonomous"}
+{"call_id": "call-164ddf2c4a12", "lead_id": "inbound-0fba3941", "role": "user", "content": "Can I just talk to a person?", "source": "elevenlabs"}
+{"call_id": "call-164ddf2c4a12", "lead_id": "inbound-0fba3941", "role": "user", "content": "Can I just talk to a person?", "source": "autonomous"}
+{"call_id": "call-164ddf2c4a12", "lead_id": "inbound-0fba3941", "role": "assistant", "content": "I'm going to connect you with a team member so you don't need to repeat what you've already told me.", "source": "autonomous"}
+{"call_id": "call-c97f216a08e2", "lead_id": "energy-lead-001", "role": "assistant", "content": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?", "source": "browser_opening"}
+{"call_id": "call-c97f216a08e2", "lead_id": "energy-lead-001", "role": "user", "content": "Yeah that is okay.", "source": "browser_customer"}
+{"call_id": "call-c97f216a08e2", "lead_id": "energy-lead-001", "role": "assistant", "content": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?", "source": "browser_deepgram"}
+{"call_id": "call-0d39b36b5dd8", "lead_id": "inbound-e1182ac6", "role": "assistant", "content": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?", "source": "browser_opening"}
+{"call_id": "call-0d39b36b5dd8", "lead_id": "inbound-e1182ac6", "role": "assistant", "content": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?", "source": "browser_deepgram"}
+{"call_id": "call-0d39b36b5dd8", "lead_id": "inbound-e1182ac6", "role": "user", "content": "hello", "source": "browser_customer"}
+{"call_id": "call-0d39b36b5dd8", "lead_id": "inbound-e1182ac6", "role": "user", "content": "hello", "source": "browser_deepgram"}
+{"call_id": "call-0d39b36b5dd8", "lead_id": "inbound-e1182ac6", "role": "assistant", "content": "Hello!", "source": "browser_deepgram"}
+{"call_id": "call-0d39b36b5dd8", "lead_id": "inbound-e1182ac6", "role": "assistant", "content": "Is it okay to record this call for quality and training purposes?", "source": "browser_deepgram"}
+{"call_id": "call-7819a7917916", "lead_id": "energy-lead-001", "role": "assistant", "content": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?", "source": "browser_opening"}
+{"call_id": "call-7819a7917916", "lead_id": "energy-lead-001", "role": "assistant", "content": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?", "source": "browser_deepgram"}
+{"call_id": "call-7819a7917916", "lead_id": "energy-lead-001", "role": "user", "content": "Yeah that is okay.", "source": "browser_customer"}
+{"call_id": "call-0d39b36b5dd8", "lead_id": "inbound-e1182ac6", "role": "user", "content": "are you there", "source": "browser_customer"}
+{"call_id": "call-0d39b36b5dd8", "lead_id": "inbound-e1182ac6", "role": "user", "content": "are you there", "source": "browser_deepgram"}
+{"call_id": "call-0d39b36b5dd8", "lead_id": "inbound-e1182ac6", "role": "assistant", "content": "Yes, I'm here.", "source": "browser_deepgram"}
+{"call_id": "call-0d39b36b5dd8", "lead_id": "inbound-e1182ac6", "role": "assistant", "content": "Is it okay to record this call for quality and training purposes?", "source": "browser_deepgram"}
+{"call_id": "call-0d39b36b5dd8", "lead_id": "inbound-e1182ac6", "role": "user", "content": "[redacted-sensitive]", "source": "browser_customer"}
+{"call_id": "call-0d39b36b5dd8", "lead_id": "inbound-e1182ac6", "role": "user", "content": "[redacted-sensitive]", "source": "browser_deepgram"}
+{"call_id": "call-0d39b36b5dd8", "lead_id": "inbound-e1182ac6", "role": "assistant", "content": "[redacted-sensitive]", "source": "browser_deepgram"}
+{"call_id": "call-0d39b36b5dd8", "lead_id": "inbound-e1182ac6", "role": "assistant", "content": "I'll connect you with a team member through the approved secure process.", "source": "browser_deepgram"}
+{"call_id": "call-a6babeac2579", "lead_id": "uploaded-energy-001", "role": "assistant", "content": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?", "source": "browser_opening"}
+{"call_id": "call-a6babeac2579", "lead_id": "uploaded-energy-001", "role": "user", "content": "I have a couple of questions first, who are you and why are you calling?", "source": "browser_customer"}
+{"call_id": "call-a6babeac2579", "lead_id": "uploaded-energy-001", "role": "assistant", "content": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?", "source": "browser_deepgram"}
+{"call_id": "call-bd82c3b8ba6a", "lead_id": "uploaded-energy-001", "role": "assistant", "content": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?", "source": "browser_opening"}
+{"call_id": "call-bd82c3b8ba6a", "lead_id": "uploaded-energy-001", "role": "assistant", "content": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?", "source": "browser_deepgram"}
+{"call_id": "call-bd82c3b8ba6a", "lead_id": "uploaded-energy-001", "role": "user", "content": "ok you can record", "source": "browser_customer"}
+{"call_id": "call-bd82c3b8ba6a", "lead_id": "uploaded-energy-001", "role": "assistant", "content": "Thank you for that.", "source": "browser_deepgram"}
+{"call_id": "call-bd82c3b8ba6a", "lead_id": "uploaded-energy-001", "role": "assistant", "content": "You previously started an Energy comparison journey.", "source": "browser_deepgram"}
+{"call_id": "call-bd82c3b8ba6a", "lead_id": "uploaded-energy-001", "role": "assistant", "content": "I can help complete the remaining questions.", "source": "browser_deepgram"}
+{"call_id": "call-bd82c3b8ba6a", "lead_id": "uploaded-energy-001", "role": "assistant", "content": "Is that right?", "source": "browser_deepgram"}
+{"call_id": "call-bd82c3b8ba6a", "lead_id": "uploaded-energy-001", "role": "user", "content": "please proceed", "source": "browser_customer"}
+{"call_id": "call-bd82c3b8ba6a", "lead_id": "uploaded-energy-001", "role": "assistant", "content": "I have the following details captured: \n\n- Postcode: 3000\n- Property type: house\n- Current provider: Origin\n- Usage pattern: standard\n- Plan preferences: green if simple\n\nIs that correct?", "source": "browser_deepgram"}
+{"call_id": "call-bd82c3b8ba6a", "lead_id": "uploaded-energy-001", "role": "user", "content": "it is correct", "source": "browser_customer"}
+{"call_id": "call-bd82c3b8ba6a", "lead_id": "uploaded-energy-001", "role": "assistant", "content": "Great!", "source": "browser_deepgram"}
+{"call_id": "call-bd82c3b8ba6a", "lead_id": "uploaded-energy-001", "role": "assistant", "content": "I will now submit the test Energy journey.", "source": "browser_deepgram"}
+{"call_id": "call-bd82c3b8ba6a", "lead_id": "uploaded-energy-001", "role": "assistant", "content": "Please stay on the line.", "source": "browser_deepgram"}
+{"call_id": "call-bd82c3b8ba6a", "lead_id": "uploaded-energy-001", "role": "assistant", "content": "Your Energy journey has been completed using the test information provided.", "source": "browser_deepgram"}
+{"call_id": "call-bd82c3b8ba6a", "lead_id": "uploaded-energy-001", "role": "assistant", "content": "Thank you for your time!", "source": "browser_deepgram"}
+{"call_id": "call-bd82c3b8ba6a", "lead_id": "uploaded-energy-001", "role": "assistant", "content": "If you have any further questions or need assistance, feel free to ask.", "source": "browser_deepgram"}
+{"call_id": "call-4fd9e21b02d9", "lead_id": "energy-lead-001", "role": "assistant", "content": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?", "source": "browser_voice"}
+{"call_id": "call-4fd9e21b02d9", "lead_id": "energy-lead-001", "role": "user", "content": "Hi.", "source": "browser_voice"}
+{"call_id": "call-4fd9e21b02d9", "lead_id": "energy-lead-001", "role": "assistant", "content": "Hello!", "source": "browser_voice"}
+{"call_id": "call-4fd9e21b02d9", "lead_id": "energy-lead-001", "role": "assistant", "content": "Just to confirm, may I continue this recorded call and ask the Energy journey questions?", "source": "browser_voice"}
+{"call_id": "call-4fd9e21b02d9", "lead_id": "energy-lead-001", "role": "user", "content": "Sure.", "source": "browser_voice"}
+{"call_id": "call-4fd9e21b02d9", "lead_id": "energy-lead-001", "role": "assistant", "content": "You previously started an Energy comparison journey.", "source": "browser_voice"}
+{"call_id": "call-4fd9e21b02d9", "lead_id": "energy-lead-001", "role": "assistant", "content": "I can help complete the remaining questions.", "source": "browser_voice"}
+{"call_id": "call-4fd9e21b02d9", "lead_id": "energy-lead-001", "role": "assistant", "content": "Is that right?", "source": "browser_voice"}
+{"call_id": "call-4fd9e21b02d9", "lead_id": "energy-lead-001", "role": "user", "content": "Correct.", "source": "browser_voice"}
+{"call_id": "call-4fd9e21b02d9", "lead_id": "energy-lead-001", "role": "assistant", "content": "Great!", "source": "browser_voice"}
+{"call_id": "call-4fd9e21b02d9", "lead_id": "energy-lead-001", "role": "assistant", "content": "The next question is: Is the property a house, unit, or another type of property?", "source": "browser_voice"}
+{"call_id": "call-4c73eec2d050", "lead_id": "energy-lead-001", "role": "assistant", "content": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?", "source": "browser_opening"}
+{"call_id": "call-4c73eec2d050", "lead_id": "energy-lead-001", "role": "assistant", "content": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?", "source": "browser_deepgram"}

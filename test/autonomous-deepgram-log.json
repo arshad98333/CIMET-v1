@@ -1,0 +1,240 @@
+[
+  {
+    "type": "Welcome",
+    "safe": {
+      "type": "Welcome"
+    }
+  },
+  {
+    "type": "SettingsApplied",
+    "safe": {
+      "type": "SettingsApplied"
+    }
+  },
+  {
+    "type": "ConversationText",
+    "safe": {
+      "type": "ConversationText",
+      "role": "assistant"
+    }
+  },
+  {
+    "type": "History",
+    "safe": {
+      "type": "History",
+      "role": "assistant"
+    }
+  },
+  {
+    "type": "UserStartedSpeaking",
+    "safe": {
+      "type": "UserStartedSpeaking"
+    }
+  },
+  {
+    "type": "AgentAudioDone",
+    "safe": {
+      "type": "AgentAudioDone"
+    }
+  },
+  {
+    "type": "ConversationText",
+    "safe": {
+      "type": "ConversationText",
+      "role": "user"
+    }
+  },
+  {
+    "type": "History",
+    "safe": {
+      "type": "History",
+      "role": "user"
+    }
+  },
+  {
+    "type": "EndOfTurn",
+    "safe": {
+      "type": "EndOfTurn"
+    }
+  },
+  {
+    "type": "LatencyReport",
+    "safe": {
+      "type": "LatencyReport"
+    }
+  },
+  {
+    "type": "LatencyReport",
+    "safe": {
+      "type": "LatencyReport"
+    }
+  },
+  {
+    "type": "FunctionCallRequest",
+    "safe": {
+      "type": "FunctionCallRequest"
+    }
+  },
+  {
+    "type": "FunctionCallResponse",
+    "safe": {
+      "type": "FunctionCallResponse"
+    }
+  },
+  {
+    "type": "History",
+    "safe": {
+      "type": "History"
+    }
+  },
+  {
+    "type": "PromptUpdated",
+    "safe": {
+      "type": "PromptUpdated"
+    }
+  },
+  {
+    "type": "LatencyReport",
+    "safe": {
+      "type": "LatencyReport"
+    }
+  },
+  {
+    "type": "LatencyReport",
+    "safe": {
+      "type": "LatencyReport"
+    }
+  },
+  {
+    "type": "ConversationText",
+    "safe": {
+      "type": "ConversationText",
+      "role": "assistant"
+    }
+  },
+  {
+    "type": "History",
+    "safe": {
+      "type": "History",
+      "role": "assistant"
+    }
+  },
+  {
+    "type": "LatencyReport",
+    "safe": {
+      "type": "LatencyReport"
+    }
+  },
+  {
+    "type": "LatencyReport",
+    "safe": {
+      "type": "LatencyReport"
+    }
+  },
+  {
+    "type": "UserStartedSpeaking",
+    "safe": {
+      "type": "UserStartedSpeaking"
+    }
+  },
+  {
+    "type": "AgentAudioDone",
+    "safe": {
+      "type": "AgentAudioDone"
+    }
+  },
+  {
+    "type": "ConversationText",
+    "safe": {
+      "type": "ConversationText",
+      "role": "user"
+    }
+  },
+  {
+    "type": "History",
+    "safe": {
+      "type": "History",
+      "role": "user"
+    }
+  },
+  {
+    "type": "EndOfTurn",
+    "safe": {
+      "type": "EndOfTurn"
+    }
+  },
+  {
+    "type": "LatencyReport",
+    "safe": {
+      "type": "LatencyReport"
+    }
+  },
+  {
+    "type": "LatencyReport",
+    "safe": {
+      "type": "LatencyReport"
+    }
+  },
+  {
+    "type": "FunctionCallRequest",
+    "safe": {
+      "type": "FunctionCallRequest"
+    }
+  },
+  {
+    "type": "FunctionCallResponse",
+    "safe": {
+      "type": "FunctionCallResponse"
+    }
+  },
+  {
+    "type": "History",
+    "safe": {
+      "type": "History"
+    }
+  },
+  {
+    "type": "PromptUpdated",
+    "safe": {
+      "type": "PromptUpdated"
+    }
+  },
+  {
+    "type": "LatencyReport",
+    "safe": {
+      "type": "LatencyReport"
+    }
+  },
+  {
+    "type": "LatencyReport",
+    "safe": {
+      "type": "LatencyReport"
+    }
+  },
+  {
+    "type": "ConversationText",
+    "safe": {
+      "type": "ConversationText",
+      "role": "assistant"
+    }
+  },
+  {
+    "type": "History",
+    "safe": {
+      "type": "History",
+      "role": "assistant"
+    }
+  },
+  {
+    "type": "LatencyReport",
+    "safe": {
+      "type": "LatencyReport"
+    }
+  },
+  {
+    "type": "LatencyReport",
+    "safe": {
+      "type": "LatencyReport"
+    }
+  }
+]

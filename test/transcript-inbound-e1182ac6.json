@@ -1,0 +1,72 @@
+[
+  {
+    "role": "assistant",
+    "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+    "source": "browser_opening"
+  },
+  {
+    "role": "assistant",
+    "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+    "source": "browser_deepgram"
+  },
+  {
+    "role": "user",
+    "text": "hello",
+    "source": "browser_customer"
+  },
+  {
+    "role": "user",
+    "text": "hello",
+    "source": "browser_deepgram"
+  },
+  {
+    "role": "assistant",
+    "text": "Hello!",
+    "source": "browser_deepgram"
+  },
+  {
+    "role": "assistant",
+    "text": "Is it okay to record this call for quality and training purposes?",
+    "source": "browser_deepgram"
+  },
+  {
+    "role": "user",
+    "text": "are you there",
+    "source": "browser_customer"
+  },
+  {
+    "role": "user",
+    "text": "are you there",
+    "source": "browser_deepgram"
+  },
+  {
+    "role": "assistant",
+    "text": "Yes, I'm here.",
+    "source": "browser_deepgram"
+  },
+  {
+    "role": "assistant",
+    "text": "Is it okay to record this call for quality and training purposes?",
+    "source": "browser_deepgram"
+  },
+  {
+    "role": "user",
+    "text": "[redacted-sensitive]",
+    "source": "browser_customer"
+  },
+  {
+    "role": "user",
+    "text": "[redacted-sensitive]",
+    "source": "browser_deepgram"
+  },
+  {
+    "role": "assistant",
+    "text": "[redacted-sensitive]",
+    "source": "browser_deepgram"
+  },
+  {
+    "role": "assistant",
+    "text": "I'll connect you with a team member through the approved secure process.",
+    "source": "browser_deepgram"
+  }
+]

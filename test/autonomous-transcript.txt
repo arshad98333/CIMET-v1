@@ -1,0 +1,8 @@
+assistant: Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?
+assistant: Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?
+user: Yeah that's okay.
+user: Yeah that's okay.
+assistant: You previously started an Energy comparison journey.
+user: Can I just talk to a person?
+user: Can I just talk to a person?
+assistant: I'm going to connect you with a team member so you don't need to repeat what you've already told me.

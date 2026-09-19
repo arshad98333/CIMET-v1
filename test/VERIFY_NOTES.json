@@ -1,0 +1,20 @@
+{
+  "verified_at": "2026-09-19T08:50:00Z",
+  "path_1_elevenlabs_deepgram": {
+    "status": "live",
+    "what_happened": "ElevenLabs customer lines were generated without lead context and injected into the live Deepgram Voice Agent. Deepgram greeted, recorded consent, then handed off when the customer asked for a person.",
+    "elevenlabs_tts": "402 Payment Required on this account, so MP3 artifacts were not written. The customer still spoke to Deepgram via InjectUserMessage and Deepgram ConversationText.",
+    "transcript_file": "autonomous-transcript.txt",
+    "deepgram_log": "autonomous-deepgram-log.json"
+  },
+  "path_3_twilio_deepgram": {
+    "status": "blocked_by_trial",
+    "what_happened": "Twilio REST accepted credentials and attempted an outbound call into the Deepgram media bridge. Trial accounts cannot dial unverified +61400000101.",
+    "error_file": "twilio-place-call.json",
+    "how_a_human_call_works": "Point the Twilio number Voice webhook to PUBLIC_BASE_URL/api/voice/inbound. ConversationText streams to /api/live/{lead_id} and the dashboard Live transcript panels."
+  },
+  "dashboard": {
+    "live_ws": "/api/live/{lead_id}",
+    "transcript_api": "/api/leads/{lead_id}/transcript"
+  }
+}

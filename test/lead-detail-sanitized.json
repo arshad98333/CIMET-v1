@@ -1,0 +1,63 @@
+{
+  "lead_id": "energy-lead-001",
+  "journey_status": "handoff_required",
+  "consent_status": "granted",
+  "captured_fields": {
+    "postcode": "3000",
+    "property_type": "house",
+    "current_provider": "synthetic-provider-a",
+    "usage_pattern": "standard",
+    "plan_preferences": "none"
+  },
+  "event_types": [
+    "call_started",
+    "consent_granted",
+    "journey_context_confirmed",
+    "field_candidate_received",
+    "field_capture",
+    "field_candidate_received",
+    "field_capture",
+    "field_candidate_received",
+    "field_capture",
+    "field_candidate_received",
+    "field_capture",
+    "field_confirmed",
+    "journey_submitted",
+    "call_ended",
+    "call_started",
+    "call_started",
+    "conversation_text",
+    "conversation_text",
+    "conversation_text",
+    "call_started",
+    "call_started",
+    "conversation_text",
+    "conversation_text",
+    "conversation_text",
+    "consent_granted",
+    "voice_tool",
+    "conversation_text",
+    "conversation_text",
+    "conversation_text",
+    "human_requested",
+    "warm_handoff_started",
+    "voice_tool",
+    "conversation_text"
+  ],
+  "voice_artifacts": [
+    {
+      "artifact_id": "artifact-277eeeb4d509",
+      "source": "deepgram",
+      "artifact_type": "agent_audio",
+      "filename": "energy-lead-001-call-3697a2c781fa-agent.pcm",
+      "size_bytes": 439680
+    },
+    {
+      "artifact_id": "artifact-ce6715a6456f",
+      "source": "deepgram",
+      "artifact_type": "agent_audio",
+      "filename": "energy-lead-001-call-a0811765aa39-agent.pcm",
+      "size_bytes": 564480
+    }
+  ]
+}

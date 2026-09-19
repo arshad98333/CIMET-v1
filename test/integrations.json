@@ -1,0 +1,64 @@
+{
+  "integrations": [
+    {
+      "name": "Twilio",
+      "purpose": "Outbound recovery after DNC, and inbound DID for live callers",
+      "configured": true,
+      "enabled": true,
+      "mode": "live",
+      "missing_env": [],
+      "missing_packages": [],
+      "notes": "Point the Twilio number voice webhook to /api/voice/inbound. Outbound still requires DNC clear."
+    },
+    {
+      "name": "ElevenLabs",
+      "purpose": "Synthetic customer voice in Path 1 \u2014 no lead context, human-like moods",
+      "configured": true,
+      "enabled": true,
+      "mode": "live",
+      "missing_env": [],
+      "missing_packages": [],
+      "notes": "Customer simulator only. FastAPI still owns consent, fields, and handoff."
+    },
+    {
+      "name": "Deepgram",
+      "purpose": "Voice Agent STT/TTS plus client-side tools owned by FastAPI",
+      "configured": true,
+      "enabled": true,
+      "mode": "live",
+      "missing_env": [],
+      "missing_packages": [],
+      "notes": "Agent: wss://agent.deepgram.com/v1/agent/converse. Docs MCP: https://api.dx.deepgram.com/kapa/mcp. CLI MCP: dg mcp."
+    },
+    {
+      "name": "Temporal",
+      "purpose": "Durable orchestration of the recovery workflow",
+      "configured": true,
+      "enabled": true,
+      "mode": "live",
+      "missing_env": [],
+      "missing_packages": [],
+      "notes": "TEMPORAL_ADDRESS is inferred as <namespace>.tmprl.cloud:7233 when not explicitly set."
+    },
+    {
+      "name": "Azure OpenAI",
+      "purpose": "Intent and guardrail classification",
+      "configured": true,
+      "enabled": false,
+      "mode": "standby",
+      "missing_env": [],
+      "missing_packages": [],
+      "notes": "Supports AZURE_ENDPOINT Foundry project endpoints and AZURE_OPENAI_ENDPOINT Azure OpenAI endpoints."
+    },
+    {
+      "name": "TinyFish",
+      "purpose": "Browser/API journey sandbox submission",
+      "configured": true,
+      "enabled": false,
+      "mode": "sandbox",
+      "missing_env": [],
+      "missing_packages": [],
+      "notes": "Set TINYFISH_JOURNEY_URL to submit into the browser/API journey sandbox. Operator approve/deny drafts before live submit. MCP: https://agent.tinyfish.ai/mcp"
+    }
+  ]
+}

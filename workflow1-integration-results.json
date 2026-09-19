@@ -1,0 +1,1286 @@
+{
+  "workflow": "CIMEnergy Workflow 1: Successful Energy Journey Recovery",
+  "lead_id": "energy-lead-001",
+  "started_at": "2026-09-19T08:17:54.239768+00:00",
+  "steps": [
+    {
+      "name": "integrations",
+      "at": "2026-09-19T08:17:59.053026+00:00",
+      "status_code": 200,
+      "integrations": {
+        "Twilio": {
+          "name": "Twilio",
+          "purpose": "Outbound test call after backend DNC approval",
+          "configured": true,
+          "enabled": true,
+          "mode": "live",
+          "missing_env": [],
+          "missing_packages": [],
+          "notes": "Uses inline TwiML by default. Keep disabled unless calling verified test numbers."
+        },
+        "Deepgram": {
+          "name": "Deepgram",
+          "purpose": "Voice Agent STT/TTS plus client-side tools owned by FastAPI",
+          "configured": true,
+          "enabled": true,
+          "mode": "live",
+          "missing_env": [],
+          "missing_packages": [],
+          "notes": "Agent: wss://agent.deepgram.com/v1/agent/converse. Docs MCP: https://api.dx.deepgram.com/kapa/mcp. CLI MCP: dg mcp."
+        },
+        "Temporal": {
+          "name": "Temporal",
+          "purpose": "Durable orchestration of the recovery workflow",
+          "configured": true,
+          "enabled": true,
+          "mode": "live",
+          "missing_env": [],
+          "missing_packages": [],
+          "notes": "TEMPORAL_ADDRESS is inferred as <namespace>.tmprl.cloud:7233 when not explicitly set."
+        },
+        "Azure OpenAI": {
+          "name": "Azure OpenAI",
+          "purpose": "Intent and guardrail classification",
+          "configured": true,
+          "enabled": false,
+          "mode": "standby",
+          "missing_env": [],
+          "missing_packages": [],
+          "notes": "Supports AZURE_ENDPOINT Foundry project endpoints and AZURE_OPENAI_ENDPOINT Azure OpenAI endpoints."
+        },
+        "TinyFish": {
+          "name": "TinyFish",
+          "purpose": "Browser/API journey sandbox submission",
+          "configured": true,
+          "enabled": false,
+          "mode": "sandbox",
+          "missing_env": [],
+          "missing_packages": [],
+          "notes": "Set TINYFISH_JOURNEY_URL to submit into the browser/API journey sandbox."
+        }
+      }
+    },
+    {
+      "name": "1_select_lead",
+      "at": "2026-09-19T08:18:07.727515+00:00",
+      "status_code": 200,
+      "found": true,
+      "synthetic": true,
+      "next_step": "property_type",
+      "postcode": "3000",
+      "call_state": "not_started",
+      "expected": "synthetic, next_step=property_type, postcode=3000, no call started"
+    },
+    {
+      "name": "2_dnc_gate_start_call",
+      "at": "2026-09-19T08:18:11.110675+00:00",
+      "status_code": 200,
+      "call_id": "call-a1c7f76f50dd",
+      "script": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+      "message": "DNC clear. Consent is required before field capture.",
+      "lead": {
+        "lead_id": "energy-lead-001",
+        "vertical": "energy",
+        "customer_label": "Synthetic Customer 001",
+        "test_phone": "+61 400 000 101",
+        "synthetic": true,
+        "dnc_status": "clear",
+        "journey_status": "consent_required",
+        "last_completed_step": "postcode",
+        "next_step": "property_type",
+        "captured_fields": {
+          "postcode": "3000"
+        },
+        "consent_status": "not_requested",
+        "outcome": null,
+        "active_call_id": "call-a1c7f76f50dd",
+        "call_state": "consent_required",
+        "harness_state": "recording_disclosure",
+        "clarification_attempts": 0,
+        "submission_result": null
+      },
+      "twilio_reaction": {
+        "mode": "live_error",
+        "provider": "twilio",
+        "to": "+61 400 000 101",
+        "error_type": "TwilioRestException",
+        "error": "HTTP 400 error: Unable to create record: The number +61400000101 is unverified. Trial accounts may only make calls to verified numbers."
+      },
+      "expected": "DNC clear, consent script, no fields collected yet"
+    },
+    {
+      "name": "voice_tool_record_consent",
+      "at": "2026-09-19T08:18:12.846573+00:00",
+      "status_code": 200,
+      "arguments": {
+        "status": "granted"
+      },
+      "message": "Consent granted. Confirm the unfinished Energy journey before collecting fields.",
+      "result": {
+        "ok": true,
+        "event": "consent_granted",
+        "consent_status": "granted",
+        "harness_state": "journey_context",
+        "speak": "You previously started an Energy comparison journey. I can help complete the remaining questions. Is that right?",
+        "message": "Consent granted. Confirm the unfinished Energy journey before collecting fields.",
+        "allowed_next": [
+          "confirm_journey_context"
+        ],
+        "context": {
+          "lead_id": "energy-lead-001",
+          "vertical": "energy",
+          "synthetic": true,
+          "harness_state": "journey_context",
+          "consent_status": "granted",
+          "last_completed_step": "postcode",
+          "next_step": "property_type",
+          "captured_fields": {
+            "postcode": "3000"
+          },
+          "clarification_attempts": 0
+        },
+        "prompt": "You are the CIMEnergy Energy recovery voice agent on a synthetic test call.\nUse plain Australian English. Stay professional, calm and brief. One or two short sentences per turn.\nAsk exactly one question at a time. Never invent missing information. Never argue or apply pressure.\n\nBackend context (do not read this aloud as a list):\n{'lead_id': 'energy-lead-001', 'vertical': 'energy', 'synthetic': True, 'harness_state': 'journey_context', 'consent_status': 'granted', 'last_completed_step': 'postcode', 'next_step': 'property_type', 'captured_fields': {'postcode': '3000'}, 'clarification_attempts': 0}\n\nCurrent approved scripts:\n- Opening / recording disclosure: Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?\n- Consent clarification (use once only): To confirm, may I continue this recorded call and ask the Energy journey questions?\n- Journey context: You previously started an Energy comparison journey. I can help complete the remaining questions. Is that right?\n- Next field question: Is the property a house, unit or another type of property?\n- No advice: I can collect the information needed to complete the comparison journey, but I can't recommend a provider or plan. I can connect you with a team member if you would like advice.\n- Payment boundary: Please don't share card or payment details over this call. I'll connect you with a team member through the approved secure process.\n- Decline: Understood. I won't continue. Thank you for your time.\n- Handoff: I'm going to connect you with a team member so you don't need to repeat what you've already told me. I'll pass on the progress and the reason for the transfer.\n\nHard rules:\n1. Do not collect journey fields until FastAPI returns consent_status=granted via a tool.\n2. After consent, confirm the unfinished journey before asking field questions.\n3. Collect only the current next_step from FastAPI. Allowed fields in order: postcode, property_type, current_provider, usage_pattern, plan_preferences.\n4. Never recommend a provider, plan, saving, cheapest option or financial outcome.\n5. Never ask for or repeat card, payment, BSB, account, CVV, OTP or security-code values.\n6. If the customer declines, says no, or does not consent, call end_call. Do not retry.\n7. If the customer asks for a human, sounds angry or confused after one clarification, or asks an off-script question, call create_handoff.\n8. If payment is mentioned, call create_handoff with trigger payment_mentioned. Do not include the value.\n9. Do not say the journey is complete until submit_test_payload returns accepted.\n10. Keep customer speech simple. Do not mention MongoDB, Temporal, tools, or internal IDs.\n\nYou must use tools for every state-changing action. Deepgram may propose a value. FastAPI decides.\n"
+      },
+      "lead": {
+        "lead_id": "energy-lead-001",
+        "vertical": "energy",
+        "customer_label": "Synthetic Customer 001",
+        "test_phone": "+61 400 000 101",
+        "synthetic": true,
+        "dnc_status": "clear",
+        "journey_status": "in_progress",
+        "last_completed_step": "postcode",
+        "next_step": "property_type",
+        "captured_fields": {
+          "postcode": "3000"
+        },
+        "consent_status": "granted",
+        "outcome": null,
+        "active_call_id": "call-a1c7f76f50dd",
+        "call_state": "in_progress",
+        "harness_state": "journey_context",
+        "clarification_attempts": 0,
+        "submission_result": null
+      }
+    },
+    {
+      "name": "3_consent",
+      "at": "2026-09-19T08:18:12.847777+00:00",
+      "customer": "Yes, that's okay.",
+      "expected": "consent_granted, no field collection yet"
+    },
+    {
+      "name": "voice_tool_confirm_journey_context",
+      "at": "2026-09-19T08:18:14.253865+00:00",
+      "status_code": 200,
+      "arguments": {
+        "recognised": true
+      },
+      "message": "Is the property a house, unit or another type of property?",
+      "result": {
+        "ok": true,
+        "next_step": "property_type",
+        "question": "Is the property a house, unit or another type of property?",
+        "speak": "Is the property a house, unit or another type of property?",
+        "captured_fields": {
+          "postcode": "3000"
+        },
+        "harness_state": "field_collection",
+        "context": {
+          "lead_id": "energy-lead-001",
+          "vertical": "energy",
+          "synthetic": true,
+          "harness_state": "field_collection",
+          "consent_status": "granted",
+          "last_completed_step": "postcode",
+          "next_step": "property_type",
+          "captured_fields": {
+            "postcode": "3000"
+          },
+          "clarification_attempts": 0
+        },
+        "prompt": "You are the CIMEnergy Energy recovery voice agent on a synthetic test call.\nUse plain Australian English. Stay professional, calm and brief. One or two short sentences per turn.\nAsk exactly one question at a time. Never invent missing information. Never argue or apply pressure.\n\nBackend context (do not read this aloud as a list):\n{'lead_id': 'energy-lead-001', 'vertical': 'energy', 'synthetic': True, 'harness_state': 'field_collection', 'consent_status': 'granted', 'last_completed_step': 'postcode', 'next_step': 'property_type', 'captured_fields': {'postcode': '3000'}, 'clarification_attempts': 0}\n\nCurrent approved scripts:\n- Opening / recording disclosure: Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?\n- Consent clarification (use once only): To confirm, may I continue this recorded call and ask the Energy journey questions?\n- Journey context: You previously started an Energy comparison journey. I can help complete the remaining questions. Is that right?\n- Next field question: Is the property a house, unit or another type of property?\n- No advice: I can collect the information needed to complete the comparison journey, but I can't recommend a provider or plan. I can connect you with a team member if you would like advice.\n- Payment boundary: Please don't share card or payment details over this call. I'll connect you with a team member through the approved secure process.\n- Decline: Understood. I won't continue. Thank you for your time.\n- Handoff: I'm going to connect you with a team member so you don't need to repeat what you've already told me. I'll pass on the progress and the reason for the transfer.\n\nHard rules:\n1. Do not collect journey fields until FastAPI returns consent_status=granted via a tool.\n2. After consent, confirm the unfinished journey before asking field questions.\n3. Collect only the current next_step from FastAPI. Allowed fields in order: postcode, property_type, current_provider, usage_pattern, plan_preferences.\n4. Never recommend a provider, plan, saving, cheapest option or financial outcome.\n5. Never ask for or repeat card, payment, BSB, account, CVV, OTP or security-code values.\n6. If the customer declines, says no, or does not consent, call end_call. Do not retry.\n7. If the customer asks for a human, sounds angry or confused after one clarification, or asks an off-script question, call create_handoff.\n8. If payment is mentioned, call create_handoff with trigger payment_mentioned. Do not include the value.\n9. Do not say the journey is complete until submit_test_payload returns accepted.\n10. Keep customer speech simple. Do not mention MongoDB, Temporal, tools, or internal IDs.\n\nYou must use tools for every state-changing action. Deepgram may propose a value. FastAPI decides.\n"
+      },
+      "lead": {
+        "lead_id": "energy-lead-001",
+        "vertical": "energy",
+        "customer_label": "Synthetic Customer 001",
+        "test_phone": "+61 400 000 101",
+        "synthetic": true,
+        "dnc_status": "clear",
+        "journey_status": "in_progress",
+        "last_completed_step": "postcode",
+        "next_step": "property_type",
+        "captured_fields": {
+          "postcode": "3000"
+        },
+        "consent_status": "granted",
+        "outcome": null,
+        "active_call_id": "call-a1c7f76f50dd",
+        "call_state": "in_progress",
+        "harness_state": "field_collection",
+        "clarification_attempts": 0,
+        "submission_result": null
+      }
+    },
+    {
+      "name": "4_journey_context",
+      "at": "2026-09-19T08:18:14.254961+00:00",
+      "customer": "Yes.",
+      "expected": "call_state=in_progress"
+    },
+    {
+      "name": "voice_tool_get_next_field",
+      "at": "2026-09-19T08:18:15.191242+00:00",
+      "status_code": 200,
+      "arguments": {},
+      "message": "Is the property a house, unit or another type of property?",
+      "result": {
+        "ok": true,
+        "complete": false,
+        "field": "property_type",
+        "label": "Property type",
+        "question": "Is the property a house, unit or another type of property?",
+        "speak": "Is the property a house, unit or another type of property?",
+        "captured_fields": {
+          "postcode": "3000"
+        },
+        "context": {
+          "lead_id": "energy-lead-001",
+          "vertical": "energy",
+          "synthetic": true,
+          "harness_state": "field_collection",
+          "consent_status": "granted",
+          "last_completed_step": "postcode",
+          "next_step": "property_type",
+          "captured_fields": {
+            "postcode": "3000"
+          },
+          "clarification_attempts": 0
+        },
+        "prompt": "You are the CIMEnergy Energy recovery voice agent on a synthetic test call.\nUse plain Australian English. Stay professional, calm and brief. One or two short sentences per turn.\nAsk exactly one question at a time. Never invent missing information. Never argue or apply pressure.\n\nBackend context (do not read this aloud as a list):\n{'lead_id': 'energy-lead-001', 'vertical': 'energy', 'synthetic': True, 'harness_state': 'field_collection', 'consent_status': 'granted', 'last_completed_step': 'postcode', 'next_step': 'property_type', 'captured_fields': {'postcode': '3000'}, 'clarification_attempts': 0}\n\nCurrent approved scripts:\n- Opening / recording disclosure: Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?\n- Consent clarification (use once only): To confirm, may I continue this recorded call and ask the Energy journey questions?\n- Journey context: You previously started an Energy comparison journey. I can help complete the remaining questions. Is that right?\n- Next field question: Is the property a house, unit or another type of property?\n- No advice: I can collect the information needed to complete the comparison journey, but I can't recommend a provider or plan. I can connect you with a team member if you would like advice.\n- Payment boundary: Please don't share card or payment details over this call. I'll connect you with a team member through the approved secure process.\n- Decline: Understood. I won't continue. Thank you for your time.\n- Handoff: I'm going to connect you with a team member so you don't need to repeat what you've already told me. I'll pass on the progress and the reason for the transfer.\n\nHard rules:\n1. Do not collect journey fields until FastAPI returns consent_status=granted via a tool.\n2. After consent, confirm the unfinished journey before asking field questions.\n3. Collect only the current next_step from FastAPI. Allowed fields in order: postcode, property_type, current_provider, usage_pattern, plan_preferences.\n4. Never recommend a provider, plan, saving, cheapest option or financial outcome.\n5. Never ask for or repeat card, payment, BSB, account, CVV, OTP or security-code values.\n6. If the customer declines, says no, or does not consent, call end_call. Do not retry.\n7. If the customer asks for a human, sounds angry or confused after one clarification, or asks an off-script question, call create_handoff.\n8. If payment is mentioned, call create_handoff with trigger payment_mentioned. Do not include the value.\n9. Do not say the journey is complete until submit_test_payload returns accepted.\n10. Keep customer speech simple. Do not mention MongoDB, Temporal, tools, or internal IDs.\n\nYou must use tools for every state-changing action. Deepgram may propose a value. FastAPI decides.\n"
+      },
+      "lead": {
+        "lead_id": "energy-lead-001",
+        "vertical": "energy",
+        "customer_label": "Synthetic Customer 001",
+        "test_phone": "+61 400 000 101",
+        "synthetic": true,
+        "dnc_status": "clear",
+        "journey_status": "in_progress",
+        "last_completed_step": "postcode",
+        "next_step": "property_type",
+        "captured_fields": {
+          "postcode": "3000"
+        },
+        "consent_status": "granted",
+        "outcome": null,
+        "active_call_id": "call-a1c7f76f50dd",
+        "call_state": "in_progress",
+        "harness_state": "field_collection",
+        "clarification_attempts": 0,
+        "submission_result": null
+      }
+    },
+    {
+      "name": "voice_tool_submit_field_candidate",
+      "at": "2026-09-19T08:18:17.634010+00:00",
+      "status_code": 200,
+      "arguments": {
+        "field": "property_type",
+        "value": "house"
+      },
+      "message": "Next field: current_provider.",
+      "result": {
+        "ok": true,
+        "event": "field_confirmed",
+        "field": "property_type",
+        "stored": "house",
+        "next_step": "current_provider",
+        "speak": "Who is your current energy provider?",
+        "message": "Next field: current_provider.",
+        "captured_fields": {
+          "postcode": "3000",
+          "property_type": "house"
+        },
+        "context": {
+          "lead_id": "energy-lead-001",
+          "vertical": "energy",
+          "synthetic": true,
+          "harness_state": "field_collection",
+          "consent_status": "granted",
+          "last_completed_step": "property_type",
+          "next_step": "current_provider",
+          "captured_fields": {
+            "postcode": "3000",
+            "property_type": "house"
+          },
+          "clarification_attempts": 0
+        },
+        "prompt": "You are the CIMEnergy Energy recovery voice agent on a synthetic test call.\nUse plain Australian English. Stay professional, calm and brief. One or two short sentences per turn.\nAsk exactly one question at a time. Never invent missing information. Never argue or apply pressure.\n\nBackend context (do not read this aloud as a list):\n{'lead_id': 'energy-lead-001', 'vertical': 'energy', 'synthetic': True, 'harness_state': 'field_collection', 'consent_status': 'granted', 'last_completed_step': 'property_type', 'next_step': 'current_provider', 'captured_fields': {'postcode': '3000', 'property_type': 'house'}, 'clarification_attempts': 0}\n\nCurrent approved scripts:\n- Opening / recording disclosure: Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?\n- Consent clarification (use once only): To confirm, may I continue this recorded call and ask the Energy journey questions?\n- Journey context: You previously started an Energy comparison journey. I can help complete the remaining questions. Is that right?\n- Next field question: Who is your current energy provider?\n- No advice: I can collect the information needed to complete the comparison journey, but I can't recommend a provider or plan. I can connect you with a team member if you would like advice.\n- Payment boundary: Please don't share card or payment details over this call. I'll connect you with a team member through the approved secure process.\n- Decline: Understood. I won't continue. Thank you for your time.\n- Handoff: I'm going to connect you with a team member so you don't need to repeat what you've already told me. I'll pass on the progress and the reason for the transfer.\n\nHard rules:\n1. Do not collect journey fields until FastAPI returns consent_status=granted via a tool.\n2. After consent, confirm the unfinished journey before asking field questions.\n3. Collect only the current next_step from FastAPI. Allowed fields in order: postcode, property_type, current_provider, usage_pattern, plan_preferences.\n4. Never recommend a provider, plan, saving, cheapest option or financial outcome.\n5. Never ask for or repeat card, payment, BSB, account, CVV, OTP or security-code values.\n6. If the customer declines, says no, or does not consent, call end_call. Do not retry.\n7. If the customer asks for a human, sounds angry or confused after one clarification, or asks an off-script question, call create_handoff.\n8. If payment is mentioned, call create_handoff with trigger payment_mentioned. Do not include the value.\n9. Do not say the journey is complete until submit_test_payload returns accepted.\n10. Keep customer speech simple. Do not mention MongoDB, Temporal, tools, or internal IDs.\n\nYou must use tools for every state-changing action. Deepgram may propose a value. FastAPI decides.\n"
+      },
+      "lead": {
+        "lead_id": "energy-lead-001",
+        "vertical": "energy",
+        "customer_label": "Synthetic Customer 001",
+        "test_phone": "+61 400 000 101",
+        "synthetic": true,
+        "dnc_status": "clear",
+        "journey_status": "in_progress",
+        "last_completed_step": "property_type",
+        "next_step": "current_provider",
+        "captured_fields": {
+          "postcode": "3000",
+          "property_type": "house"
+        },
+        "consent_status": "granted",
+        "outcome": null,
+        "active_call_id": "call-a1c7f76f50dd",
+        "call_state": "in_progress",
+        "harness_state": "field_collection",
+        "clarification_attempts": 0,
+        "submission_result": null
+      }
+    },
+    {
+      "name": "voice_tool_submit_field_candidate",
+      "at": "2026-09-19T08:18:20.071378+00:00",
+      "status_code": 200,
+      "arguments": {
+        "field": "current_provider",
+        "value": "synthetic-provider-a"
+      },
+      "message": "Next field: usage_pattern.",
+      "result": {
+        "ok": true,
+        "event": "field_confirmed",
+        "field": "current_provider",
+        "stored": "synthetic-provider-a",
+        "next_step": "usage_pattern",
+        "speak": "How would you describe your usual energy usage: low, standard or high?",
+        "message": "Next field: usage_pattern.",
+        "captured_fields": {
+          "postcode": "3000",
+          "property_type": "house",
+          "current_provider": "synthetic-provider-a"
+        },
+        "context": {
+          "lead_id": "energy-lead-001",
+          "vertical": "energy",
+          "synthetic": true,
+          "harness_state": "field_collection",
+          "consent_status": "granted",
+          "last_completed_step": "current_provider",
+          "next_step": "usage_pattern",
+          "captured_fields": {
+            "postcode": "3000",
+            "property_type": "house",
+            "current_provider": "synthetic-provider-a"
+          },
+          "clarification_attempts": 0
+        },
+        "prompt": "You are the CIMEnergy Energy recovery voice agent on a synthetic test call.\nUse plain Australian English. Stay professional, calm and brief. One or two short sentences per turn.\nAsk exactly one question at a time. Never invent missing information. Never argue or apply pressure.\n\nBackend context (do not read this aloud as a list):\n{'lead_id': 'energy-lead-001', 'vertical': 'energy', 'synthetic': True, 'harness_state': 'field_collection', 'consent_status': 'granted', 'last_completed_step': 'current_provider', 'next_step': 'usage_pattern', 'captured_fields': {'postcode': '3000', 'property_type': 'house', 'current_provider': 'synthetic-provider-a'}, 'clarification_attempts': 0}\n\nCurrent approved scripts:\n- Opening / recording disclosure: Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?\n- Consent clarification (use once only): To confirm, may I continue this recorded call and ask the Energy journey questions?\n- Journey context: You previously started an Energy comparison journey. I can help complete the remaining questions. Is that right?\n- Next field question: How would you describe your usual energy usage: low, standard or high?\n- No advice: I can collect the information needed to complete the comparison journey, but I can't recommend a provider or plan. I can connect you with a team member if you would like advice.\n- Payment boundary: Please don't share card or payment details over this call. I'll connect you with a team member through the approved secure process.\n- Decline: Understood. I won't continue. Thank you for your time.\n- Handoff: I'm going to connect you with a team member so you don't need to repeat what you've already told me. I'll pass on the progress and the reason for the transfer.\n\nHard rules:\n1. Do not collect journey fields until FastAPI returns consent_status=granted via a tool.\n2. After consent, confirm the unfinished journey before asking field questions.\n3. Collect only the current next_step from FastAPI. Allowed fields in order: postcode, property_type, current_provider, usage_pattern, plan_preferences.\n4. Never recommend a provider, plan, saving, cheapest option or financial outcome.\n5. Never ask for or repeat card, payment, BSB, account, CVV, OTP or security-code values.\n6. If the customer declines, says no, or does not consent, call end_call. Do not retry.\n7. If the customer asks for a human, sounds angry or confused after one clarification, or asks an off-script question, call create_handoff.\n8. If payment is mentioned, call create_handoff with trigger payment_mentioned. Do not include the value.\n9. Do not say the journey is complete until submit_test_payload returns accepted.\n10. Keep customer speech simple. Do not mention MongoDB, Temporal, tools, or internal IDs.\n\nYou must use tools for every state-changing action. Deepgram may propose a value. FastAPI decides.\n"
+      },
+      "lead": {
+        "lead_id": "energy-lead-001",
+        "vertical": "energy",
+        "customer_label": "Synthetic Customer 001",
+        "test_phone": "+61 400 000 101",
+        "synthetic": true,
+        "dnc_status": "clear",
+        "journey_status": "in_progress",
+        "last_completed_step": "current_provider",
+        "next_step": "usage_pattern",
+        "captured_fields": {
+          "postcode": "3000",
+          "property_type": "house",
+          "current_provider": "synthetic-provider-a"
+        },
+        "consent_status": "granted",
+        "outcome": null,
+        "active_call_id": "call-a1c7f76f50dd",
+        "call_state": "in_progress",
+        "harness_state": "field_collection",
+        "clarification_attempts": 0,
+        "submission_result": null
+      }
+    },
+    {
+      "name": "voice_tool_submit_field_candidate",
+      "at": "2026-09-19T08:18:22.512154+00:00",
+      "status_code": 200,
+      "arguments": {
+        "field": "usage_pattern",
+        "value": "standard"
+      },
+      "message": "Next field: plan_preferences.",
+      "result": {
+        "ok": true,
+        "event": "field_confirmed",
+        "field": "usage_pattern",
+        "stored": "standard",
+        "next_step": "plan_preferences",
+        "speak": "Do you have any plan preferences to include, such as green energy, or none?",
+        "message": "Next field: plan_preferences.",
+        "captured_fields": {
+          "postcode": "3000",
+          "property_type": "house",
+          "current_provider": "synthetic-provider-a",
+          "usage_pattern": "standard"
+        },
+        "context": {
+          "lead_id": "energy-lead-001",
+          "vertical": "energy",
+          "synthetic": true,
+          "harness_state": "field_collection",
+          "consent_status": "granted",
+          "last_completed_step": "usage_pattern",
+          "next_step": "plan_preferences",
+          "captured_fields": {
+            "postcode": "3000",
+            "property_type": "house",
+            "current_provider": "synthetic-provider-a",
+            "usage_pattern": "standard"
+          },
+          "clarification_attempts": 0
+        },
+        "prompt": "You are the CIMEnergy Energy recovery voice agent on a synthetic test call.\nUse plain Australian English. Stay professional, calm and brief. One or two short sentences per turn.\nAsk exactly one question at a time. Never invent missing information. Never argue or apply pressure.\n\nBackend context (do not read this aloud as a list):\n{'lead_id': 'energy-lead-001', 'vertical': 'energy', 'synthetic': True, 'harness_state': 'field_collection', 'consent_status': 'granted', 'last_completed_step': 'usage_pattern', 'next_step': 'plan_preferences', 'captured_fields': {'postcode': '3000', 'property_type': 'house', 'current_provider': 'synthetic-provider-a', 'usage_pattern': 'standard'}, 'clarification_attempts': 0}\n\nCurrent approved scripts:\n- Opening / recording disclosure: Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?\n- Consent clarification (use once only): To confirm, may I continue this recorded call and ask the Energy journey questions?\n- Journey context: You previously started an Energy comparison journey. I can help complete the remaining questions. Is that right?\n- Next field question: Do you have any plan preferences to include, such as green energy, or none?\n- No advice: I can collect the information needed to complete the comparison journey, but I can't recommend a provider or plan. I can connect you with a team member if you would like advice.\n- Payment boundary: Please don't share card or payment details over this call. I'll connect you with a team member through the approved secure process.\n- Decline: Understood. I won't continue. Thank you for your time.\n- Handoff: I'm going to connect you with a team member so you don't need to repeat what you've already told me. I'll pass on the progress and the reason for the transfer.\n\nHard rules:\n1. Do not collect journey fields until FastAPI returns consent_status=granted via a tool.\n2. After consent, confirm the unfinished journey before asking field questions.\n3. Collect only the current next_step from FastAPI. Allowed fields in order: postcode, property_type, current_provider, usage_pattern, plan_preferences.\n4. Never recommend a provider, plan, saving, cheapest option or financial outcome.\n5. Never ask for or repeat card, payment, BSB, account, CVV, OTP or security-code values.\n6. If the customer declines, says no, or does not consent, call end_call. Do not retry.\n7. If the customer asks for a human, sounds angry or confused after one clarification, or asks an off-script question, call create_handoff.\n8. If payment is mentioned, call create_handoff with trigger payment_mentioned. Do not include the value.\n9. Do not say the journey is complete until submit_test_payload returns accepted.\n10. Keep customer speech simple. Do not mention MongoDB, Temporal, tools, or internal IDs.\n\nYou must use tools for every state-changing action. Deepgram may propose a value. FastAPI decides.\n"
+      },
+      "lead": {
+        "lead_id": "energy-lead-001",
+        "vertical": "energy",
+        "customer_label": "Synthetic Customer 001",
+        "test_phone": "+61 400 000 101",
+        "synthetic": true,
+        "dnc_status": "clear",
+        "journey_status": "in_progress",
+        "last_completed_step": "usage_pattern",
+        "next_step": "plan_preferences",
+        "captured_fields": {
+          "postcode": "3000",
+          "property_type": "house",
+          "current_provider": "synthetic-provider-a",
+          "usage_pattern": "standard"
+        },
+        "consent_status": "granted",
+        "outcome": null,
+        "active_call_id": "call-a1c7f76f50dd",
+        "call_state": "in_progress",
+        "harness_state": "field_collection",
+        "clarification_attempts": 0,
+        "submission_result": null
+      }
+    },
+    {
+      "name": "voice_tool_submit_field_candidate",
+      "at": "2026-09-19T08:18:24.951078+00:00",
+      "status_code": 200,
+      "arguments": {
+        "field": "plan_preferences",
+        "value": "none"
+      },
+      "message": "All required fields are captured. Submit the journey payload.",
+      "result": {
+        "ok": true,
+        "event": "field_confirmed",
+        "field": "plan_preferences",
+        "stored": "none",
+        "next_step": null,
+        "speak": "All required fields are captured. Submit the journey payload.",
+        "message": "All required fields are captured. Submit the journey payload.",
+        "captured_fields": {
+          "postcode": "3000",
+          "property_type": "house",
+          "current_provider": "synthetic-provider-a",
+          "usage_pattern": "standard",
+          "plan_preferences": "none"
+        },
+        "context": {
+          "lead_id": "energy-lead-001",
+          "vertical": "energy",
+          "synthetic": true,
+          "harness_state": "final_confirmation",
+          "consent_status": "granted",
+          "last_completed_step": "plan_preferences",
+          "next_step": null,
+          "captured_fields": {
+            "postcode": "3000",
+            "property_type": "house",
+            "current_provider": "synthetic-provider-a",
+            "usage_pattern": "standard",
+            "plan_preferences": "none"
+          },
+          "clarification_attempts": 0
+        },
+        "prompt": "You are the CIMEnergy Energy recovery voice agent on a synthetic test call.\nUse plain Australian English. Stay professional, calm and brief. One or two short sentences per turn.\nAsk exactly one question at a time. Never invent missing information. Never argue or apply pressure.\n\nBackend context (do not read this aloud as a list):\n{'lead_id': 'energy-lead-001', 'vertical': 'energy', 'synthetic': True, 'harness_state': 'final_confirmation', 'consent_status': 'granted', 'last_completed_step': 'plan_preferences', 'next_step': None, 'captured_fields': {'postcode': '3000', 'property_type': 'house', 'current_provider': 'synthetic-provider-a', 'usage_pattern': 'standard', 'plan_preferences': 'none'}, 'clarification_attempts': 0}\n\nCurrent approved scripts:\n- Opening / recording disclosure: Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?\n- Consent clarification (use once only): To confirm, may I continue this recorded call and ask the Energy journey questions?\n- Journey context: You previously started an Energy comparison journey. I can help complete the remaining questions. Is that right?\n- Next field question: \n- No advice: I can collect the information needed to complete the comparison journey, but I can't recommend a provider or plan. I can connect you with a team member if you would like advice.\n- Payment boundary: Please don't share card or payment details over this call. I'll connect you with a team member through the approved secure process.\n- Decline: Understood. I won't continue. Thank you for your time.\n- Handoff: I'm going to connect you with a team member so you don't need to repeat what you've already told me. I'll pass on the progress and the reason for the transfer.\n\nHard rules:\n1. Do not collect journey fields until FastAPI returns consent_status=granted via a tool.\n2. After consent, confirm the unfinished journey before asking field questions.\n3. Collect only the current next_step from FastAPI. Allowed fields in order: postcode, property_type, current_provider, usage_pattern, plan_preferences.\n4. Never recommend a provider, plan, saving, cheapest option or financial outcome.\n5. Never ask for or repeat card, payment, BSB, account, CVV, OTP or security-code values.\n6. If the customer declines, says no, or does not consent, call end_call. Do not retry.\n7. If the customer asks for a human, sounds angry or confused after one clarification, or asks an off-script question, call create_handoff.\n8. If payment is mentioned, call create_handoff with trigger payment_mentioned. Do not include the value.\n9. Do not say the journey is complete until submit_test_payload returns accepted.\n10. Keep customer speech simple. Do not mention MongoDB, Temporal, tools, or internal IDs.\n\nYou must use tools for every state-changing action. Deepgram may propose a value. FastAPI decides.\n"
+      },
+      "lead": {
+        "lead_id": "energy-lead-001",
+        "vertical": "energy",
+        "customer_label": "Synthetic Customer 001",
+        "test_phone": "+61 400 000 101",
+        "synthetic": true,
+        "dnc_status": "clear",
+        "journey_status": "in_progress",
+        "last_completed_step": "plan_preferences",
+        "next_step": null,
+        "captured_fields": {
+          "postcode": "3000",
+          "property_type": "house",
+          "current_provider": "synthetic-provider-a",
+          "usage_pattern": "standard",
+          "plan_preferences": "none"
+        },
+        "consent_status": "granted",
+        "outcome": null,
+        "active_call_id": "call-a1c7f76f50dd",
+        "call_state": "in_progress",
+        "harness_state": "final_confirmation",
+        "clarification_attempts": 0,
+        "submission_result": null
+      }
+    },
+    {
+      "name": "5_collect_fields",
+      "at": "2026-09-19T08:18:24.951989+00:00",
+      "expected": "house, synthetic-provider-a, standard, none",
+      "note": "No card or payment information requested"
+    },
+    {
+      "name": "voice_tool_confirm_fields",
+      "at": "2026-09-19T08:18:26.370025+00:00",
+      "status_code": 200,
+      "arguments": {
+        "confirmed": true
+      },
+      "message": "I will now submit the test Energy journey. Please stay on the line.",
+      "result": {
+        "ok": true,
+        "ready_to_submit": true,
+        "captured_fields": {
+          "postcode": "3000",
+          "property_type": "house",
+          "current_provider": "synthetic-provider-a",
+          "usage_pattern": "standard",
+          "plan_preferences": "none"
+        },
+        "speak": "I will now submit the test Energy journey. Please stay on the line.",
+        "context": {
+          "lead_id": "energy-lead-001",
+          "vertical": "energy",
+          "synthetic": true,
+          "harness_state": "final_confirmation",
+          "consent_status": "granted",
+          "last_completed_step": "plan_preferences",
+          "next_step": null,
+          "captured_fields": {
+            "postcode": "3000",
+            "property_type": "house",
+            "current_provider": "synthetic-provider-a",
+            "usage_pattern": "standard",
+            "plan_preferences": "none"
+          },
+          "clarification_attempts": 0
+        },
+        "prompt": "You are the CIMEnergy Energy recovery voice agent on a synthetic test call.\nUse plain Australian English. Stay professional, calm and brief. One or two short sentences per turn.\nAsk exactly one question at a time. Never invent missing information. Never argue or apply pressure.\n\nBackend context (do not read this aloud as a list):\n{'lead_id': 'energy-lead-001', 'vertical': 'energy', 'synthetic': True, 'harness_state': 'final_confirmation', 'consent_status': 'granted', 'last_completed_step': 'plan_preferences', 'next_step': None, 'captured_fields': {'postcode': '3000', 'property_type': 'house', 'current_provider': 'synthetic-provider-a', 'usage_pattern': 'standard', 'plan_preferences': 'none'}, 'clarification_attempts': 0}\n\nCurrent approved scripts:\n- Opening / recording disclosure: Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?\n- Consent clarification (use once only): To confirm, may I continue this recorded call and ask the Energy journey questions?\n- Journey context: You previously started an Energy comparison journey. I can help complete the remaining questions. Is that right?\n- Next field question: \n- No advice: I can collect the information needed to complete the comparison journey, but I can't recommend a provider or plan. I can connect you with a team member if you would like advice.\n- Payment boundary: Please don't share card or payment details over this call. I'll connect you with a team member through the approved secure process.\n- Decline: Understood. I won't continue. Thank you for your time.\n- Handoff: I'm going to connect you with a team member so you don't need to repeat what you've already told me. I'll pass on the progress and the reason for the transfer.\n\nHard rules:\n1. Do not collect journey fields until FastAPI returns consent_status=granted via a tool.\n2. After consent, confirm the unfinished journey before asking field questions.\n3. Collect only the current next_step from FastAPI. Allowed fields in order: postcode, property_type, current_provider, usage_pattern, plan_preferences.\n4. Never recommend a provider, plan, saving, cheapest option or financial outcome.\n5. Never ask for or repeat card, payment, BSB, account, CVV, OTP or security-code values.\n6. If the customer declines, says no, or does not consent, call end_call. Do not retry.\n7. If the customer asks for a human, sounds angry or confused after one clarification, or asks an off-script question, call create_handoff.\n8. If payment is mentioned, call create_handoff with trigger payment_mentioned. Do not include the value.\n9. Do not say the journey is complete until submit_test_payload returns accepted.\n10. Keep customer speech simple. Do not mention MongoDB, Temporal, tools, or internal IDs.\n\nYou must use tools for every state-changing action. Deepgram may propose a value. FastAPI decides.\n"
+      },
+      "lead": {
+        "lead_id": "energy-lead-001",
+        "vertical": "energy",
+        "customer_label": "Synthetic Customer 001",
+        "test_phone": "+61 400 000 101",
+        "synthetic": true,
+        "dnc_status": "clear",
+        "journey_status": "in_progress",
+        "last_completed_step": "plan_preferences",
+        "next_step": null,
+        "captured_fields": {
+          "postcode": "3000",
+          "property_type": "house",
+          "current_provider": "synthetic-provider-a",
+          "usage_pattern": "standard",
+          "plan_preferences": "none"
+        },
+        "consent_status": "granted",
+        "outcome": null,
+        "active_call_id": "call-a1c7f76f50dd",
+        "call_state": "in_progress",
+        "harness_state": "final_confirmation",
+        "clarification_attempts": 0,
+        "submission_result": null
+      }
+    },
+    {
+      "name": "6_confirm_fields",
+      "at": "2026-09-19T08:18:26.371379+00:00",
+      "customer": "Yes.",
+      "expected": "fields confirmed, no recommendation"
+    },
+    {
+      "name": "voice_tool_submit_test_payload",
+      "at": "2026-09-19T08:18:28.357497+00:00",
+      "status_code": 200,
+      "arguments": {},
+      "message": "Your Energy journey has been completed using the test information provided. Thank you for your time.",
+      "result": {
+        "ok": true,
+        "accepted": true,
+        "submission_id": "submission-40ce8402f50e",
+        "speak": "Your Energy journey has been completed using the test information provided. Thank you for your time.",
+        "event": "test_payload_submitted",
+        "harness_state": "completed",
+        "context": {
+          "lead_id": "energy-lead-001",
+          "vertical": "energy",
+          "synthetic": true,
+          "harness_state": "completed",
+          "consent_status": "granted",
+          "last_completed_step": "plan_preferences",
+          "next_step": null,
+          "captured_fields": {
+            "postcode": "3000",
+            "property_type": "house",
+            "current_provider": "synthetic-provider-a",
+            "usage_pattern": "standard",
+            "plan_preferences": "none"
+          },
+          "clarification_attempts": 0
+        },
+        "prompt": "You are the CIMEnergy Energy recovery voice agent on a synthetic test call.\nUse plain Australian English. Stay professional, calm and brief. One or two short sentences per turn.\nAsk exactly one question at a time. Never invent missing information. Never argue or apply pressure.\n\nBackend context (do not read this aloud as a list):\n{'lead_id': 'energy-lead-001', 'vertical': 'energy', 'synthetic': True, 'harness_state': 'completed', 'consent_status': 'granted', 'last_completed_step': 'plan_preferences', 'next_step': None, 'captured_fields': {'postcode': '3000', 'property_type': 'house', 'current_provider': 'synthetic-provider-a', 'usage_pattern': 'standard', 'plan_preferences': 'none'}, 'clarification_attempts': 0}\n\nCurrent approved scripts:\n- Opening / recording disclosure: Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?\n- Consent clarification (use once only): To confirm, may I continue this recorded call and ask the Energy journey questions?\n- Journey context: You previously started an Energy comparison journey. I can help complete the remaining questions. Is that right?\n- Next field question: \n- No advice: I can collect the information needed to complete the comparison journey, but I can't recommend a provider or plan. I can connect you with a team member if you would like advice.\n- Payment boundary: Please don't share card or payment details over this call. I'll connect you with a team member through the approved secure process.\n- Decline: Understood. I won't continue. Thank you for your time.\n- Handoff: I'm going to connect you with a team member so you don't need to repeat what you've already told me. I'll pass on the progress and the reason for the transfer.\n\nHard rules:\n1. Do not collect journey fields until FastAPI returns consent_status=granted via a tool.\n2. After consent, confirm the unfinished journey before asking field questions.\n3. Collect only the current next_step from FastAPI. Allowed fields in order: postcode, property_type, current_provider, usage_pattern, plan_preferences.\n4. Never recommend a provider, plan, saving, cheapest option or financial outcome.\n5. Never ask for or repeat card, payment, BSB, account, CVV, OTP or security-code values.\n6. If the customer declines, says no, or does not consent, call end_call. Do not retry.\n7. If the customer asks for a human, sounds angry or confused after one clarification, or asks an off-script question, call create_handoff.\n8. If payment is mentioned, call create_handoff with trigger payment_mentioned. Do not include the value.\n9. Do not say the journey is complete until submit_test_payload returns accepted.\n10. Keep customer speech simple. Do not mention MongoDB, Temporal, tools, or internal IDs.\n\nYou must use tools for every state-changing action. Deepgram may propose a value. FastAPI decides.\n"
+      },
+      "lead": {
+        "lead_id": "energy-lead-001",
+        "vertical": "energy",
+        "customer_label": "Synthetic Customer 001",
+        "test_phone": "+61 400 000 101",
+        "synthetic": true,
+        "dnc_status": "clear",
+        "journey_status": "completed",
+        "last_completed_step": "plan_preferences",
+        "next_step": null,
+        "captured_fields": {
+          "postcode": "3000",
+          "property_type": "house",
+          "current_provider": "synthetic-provider-a",
+          "usage_pattern": "standard",
+          "plan_preferences": "none"
+        },
+        "consent_status": "granted",
+        "outcome": "Journey submitted with approved test payload",
+        "active_call_id": "call-a1c7f76f50dd",
+        "call_state": "completed",
+        "harness_state": "completed",
+        "clarification_attempts": 0,
+        "submission_result": {
+          "submission_id": "submission-40ce8402f50e",
+          "lead_id": "energy-lead-001",
+          "payload": {
+            "postcode": "3000",
+            "property_type": "house",
+            "current_provider": "synthetic-provider-a",
+            "usage_pattern": "standard",
+            "plan_preferences": "none"
+          },
+          "status": "accepted",
+          "created_at": "2026-09-19T08:18:27.075806Z"
+        }
+      }
+    },
+    {
+      "name": "7_submit_payload",
+      "at": "2026-09-19T08:18:28.358375+00:00",
+      "expected": "test_payload_submitted / accepted"
+    },
+    {
+      "name": "voice_tool_end_call",
+      "at": "2026-09-19T08:18:29.774709+00:00",
+      "status_code": 200,
+      "arguments": {
+        "reason": "completed"
+      },
+      "message": "Your Energy journey has been completed using the test information provided. Thank you for your time.",
+      "result": {
+        "ok": true,
+        "ended": true,
+        "reason": "completed",
+        "speak": "Your Energy journey has been completed using the test information provided. Thank you for your time.",
+        "close_stream": true,
+        "context": {
+          "lead_id": "energy-lead-001",
+          "vertical": "energy",
+          "synthetic": true,
+          "harness_state": "completed",
+          "consent_status": "granted",
+          "last_completed_step": "plan_preferences",
+          "next_step": null,
+          "captured_fields": {
+            "postcode": "3000",
+            "property_type": "house",
+            "current_provider": "synthetic-provider-a",
+            "usage_pattern": "standard",
+            "plan_preferences": "none"
+          },
+          "clarification_attempts": 0
+        },
+        "prompt": "You are the CIMEnergy Energy recovery voice agent on a synthetic test call.\nUse plain Australian English. Stay professional, calm and brief. One or two short sentences per turn.\nAsk exactly one question at a time. Never invent missing information. Never argue or apply pressure.\n\nBackend context (do not read this aloud as a list):\n{'lead_id': 'energy-lead-001', 'vertical': 'energy', 'synthetic': True, 'harness_state': 'completed', 'consent_status': 'granted', 'last_completed_step': 'plan_preferences', 'next_step': None, 'captured_fields': {'postcode': '3000', 'property_type': 'house', 'current_provider': 'synthetic-provider-a', 'usage_pattern': 'standard', 'plan_preferences': 'none'}, 'clarification_attempts': 0}\n\nCurrent approved scripts:\n- Opening / recording disclosure: Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?\n- Consent clarification (use once only): To confirm, may I continue this recorded call and ask the Energy journey questions?\n- Journey context: You previously started an Energy comparison journey. I can help complete the remaining questions. Is that right?\n- Next field question: \n- No advice: I can collect the information needed to complete the comparison journey, but I can't recommend a provider or plan. I can connect you with a team member if you would like advice.\n- Payment boundary: Please don't share card or payment details over this call. I'll connect you with a team member through the approved secure process.\n- Decline: Understood. I won't continue. Thank you for your time.\n- Handoff: I'm going to connect you with a team member so you don't need to repeat what you've already told me. I'll pass on the progress and the reason for the transfer.\n\nHard rules:\n1. Do not collect journey fields until FastAPI returns consent_status=granted via a tool.\n2. After consent, confirm the unfinished journey before asking field questions.\n3. Collect only the current next_step from FastAPI. Allowed fields in order: postcode, property_type, current_provider, usage_pattern, plan_preferences.\n4. Never recommend a provider, plan, saving, cheapest option or financial outcome.\n5. Never ask for or repeat card, payment, BSB, account, CVV, OTP or security-code values.\n6. If the customer declines, says no, or does not consent, call end_call. Do not retry.\n7. If the customer asks for a human, sounds angry or confused after one clarification, or asks an off-script question, call create_handoff.\n8. If payment is mentioned, call create_handoff with trigger payment_mentioned. Do not include the value.\n9. Do not say the journey is complete until submit_test_payload returns accepted.\n10. Keep customer speech simple. Do not mention MongoDB, Temporal, tools, or internal IDs.\n\nYou must use tools for every state-changing action. Deepgram may propose a value. FastAPI decides.\n"
+      },
+      "lead": {
+        "lead_id": "energy-lead-001",
+        "vertical": "energy",
+        "customer_label": "Synthetic Customer 001",
+        "test_phone": "+61 400 000 101",
+        "synthetic": true,
+        "dnc_status": "clear",
+        "journey_status": "completed",
+        "last_completed_step": "plan_preferences",
+        "next_step": null,
+        "captured_fields": {
+          "postcode": "3000",
+          "property_type": "house",
+          "current_provider": "synthetic-provider-a",
+          "usage_pattern": "standard",
+          "plan_preferences": "none"
+        },
+        "consent_status": "granted",
+        "outcome": "Journey submitted with approved test payload",
+        "active_call_id": "call-a1c7f76f50dd",
+        "call_state": "completed",
+        "harness_state": "completed",
+        "clarification_attempts": 0,
+        "submission_result": {
+          "submission_id": "submission-40ce8402f50e",
+          "lead_id": "energy-lead-001",
+          "payload": {
+            "postcode": "3000",
+            "property_type": "house",
+            "current_provider": "synthetic-provider-a",
+            "usage_pattern": "standard",
+            "plan_preferences": "none"
+          },
+          "status": "accepted",
+          "created_at": "2026-09-19T08:18:27.075806Z"
+        }
+      }
+    },
+    {
+      "name": "8_close_call",
+      "at": "2026-09-19T08:18:29.776237+00:00",
+      "expected": "call_ended and journey completed"
+    },
+    {
+      "name": "validation",
+      "at": "2026-09-19T08:18:31.386899+00:00",
+      "status_code": 200,
+      "journey_status": "completed",
+      "call_state": "completed",
+      "harness_state": "completed",
+      "outcome": "Journey submitted with approved test payload",
+      "captured_fields": {
+        "postcode": "3000",
+        "property_type": "house",
+        "current_provider": "synthetic-provider-a",
+        "usage_pattern": "standard",
+        "plan_preferences": "none"
+      },
+      "event_types": [
+        "call_started",
+        "consent_granted",
+        "journey_context_confirmed",
+        "field_candidate_received",
+        "field_capture",
+        "field_candidate_received",
+        "field_capture",
+        "field_candidate_received",
+        "field_capture",
+        "field_candidate_received",
+        "field_capture",
+        "field_confirmed",
+        "journey_submitted",
+        "call_ended"
+      ],
+      "submissions": [
+        {
+          "submission_id": "submission-40ce8402f50e",
+          "lead_id": "energy-lead-001",
+          "payload": {
+            "postcode": "3000",
+            "property_type": "house",
+            "current_provider": "synthetic-provider-a",
+            "usage_pattern": "standard",
+            "plan_preferences": "none"
+          },
+          "status": "accepted",
+          "created_at": "2026-09-19T08:18:27.075806Z"
+        }
+      ],
+      "missing_expected_events": [],
+      "script_expected_dnc_clear_before_call_connected": {
+        "dnc_clear_present": false,
+        "call_connected_present": false,
+        "note": "Simulator path logs call_started with DNC clear; call_connected is emitted on the live Twilio media bridge."
+      },
+      "pass": true
+    }
+  ],
+  "tools": {
+    "MongoDB": {
+      "reaction": "reset energy-lead-001 to seeded dropped_off state and cleared prior events",
+      "database": "cimenergy",
+      "ok": true
+    },
+    "Twilio": {
+      "ok": true,
+      "reaction": {
+        "mode": "live_error",
+        "provider": "twilio",
+        "to": "+61 400 000 101",
+        "error_type": "TwilioRestException",
+        "error": "HTTP 400 error: Unable to create record: The number +61400000101 is unverified. Trial accounts may only make calls to verified numbers."
+      },
+      "call_id": "call-a1c7f76f50dd"
+    },
+    "Deepgram": {
+      "configured": true,
+      "enabled": true,
+      "mode": "live",
+      "missing_env": [],
+      "missing_packages": [],
+      "notes": "Agent: wss://agent.deepgram.com/v1/agent/converse. Docs MCP: https://api.dx.deepgram.com/kapa/mcp. CLI MCP: dg mcp.",
+      "reaction": "live"
+    },
+    "Temporal": {
+      "status_code": 200,
+      "reaction": {
+        "enabled": true,
+        "workflow_id": "cimenergy-recovery-energy-lead-001",
+        "state": {
+          "active_call_id": "call-a1c7f76f50dd",
+          "call_attempts": [],
+          "completed_fields": {
+            "current_provider": "synthetic-provider-a",
+            "plan_preferences": "none",
+            "postcode": "3000",
+            "property_type": "house",
+            "usage_pattern": "standard"
+          },
+          "consent_status": "granted",
+          "handoff": null,
+          "last_event": null,
+          "lead_id": "energy-lead-001",
+          "next_step": null,
+          "recordings": [],
+          "resume_instruction": "No automated recovery required.",
+          "status": "completed",
+          "voice_bridge": {
+            "connected": false,
+            "last_stream_sid": "[redacted]"
+          }
+        }
+      },
+      "ok": true
+    },
+    "Azure OpenAI": {
+      "ok": true,
+      "reaction": {
+        "consent_yes": {
+          "status_code": 200,
+          "result": {
+            "result": {
+              "mode": "standby",
+              "intent": "unknown",
+              "confidence": 0.0
+            }
+          }
+        },
+        "journey_yes": {
+          "status_code": 200,
+          "result": {
+            "result": {
+              "mode": "standby",
+              "intent": "unknown",
+              "confidence": 0.0
+            }
+          }
+        },
+        "property_type": {
+          "status_code": 200,
+          "result": {
+            "result": {
+              "mode": "standby",
+              "intent": "unknown",
+              "confidence": 0.0
+            }
+          }
+        },
+        "advice": {
+          "status_code": 200,
+          "result": {
+            "result": {
+              "mode": "standby",
+              "intent": "unknown",
+              "confidence": 0.0
+            }
+          }
+        },
+        "payment": {
+          "status_code": 200,
+          "result": {
+            "result": {
+              "mode": "standby",
+              "intent": "unknown",
+              "confidence": 0.0
+            }
+          }
+        }
+      }
+    },
+    "TinyFish": {
+      "ok": true,
+      "reaction": {
+        "ok": true,
+        "accepted": true,
+        "submission_id": "submission-40ce8402f50e",
+        "speak": "Your Energy journey has been completed using the test information provided. Thank you for your time.",
+        "event": "test_payload_submitted",
+        "harness_state": "completed",
+        "context": {
+          "lead_id": "energy-lead-001",
+          "vertical": "energy",
+          "synthetic": true,
+          "harness_state": "completed",
+          "consent_status": "granted",
+          "last_completed_step": "plan_preferences",
+          "next_step": null,
+          "captured_fields": {
+            "postcode": "3000",
+            "property_type": "house",
+            "current_provider": "synthetic-provider-a",
+            "usage_pattern": "standard",
+            "plan_preferences": "none"
+          },
+          "clarification_attempts": 0
+        },
+        "prompt": "You are the CIMEnergy Energy recovery voice agent on a synthetic test call.\nUse plain Australian English. Stay professional, calm and brief. One or two short sentences per turn.\nAsk exactly one question at a time. Never invent missing information. Never argue or apply pressure.\n\nBackend context (do not read this aloud as a list):\n{'lead_id': 'energy-lead-001', 'vertical': 'energy', 'synthetic': True, 'harness_state': 'completed', 'consent_status': 'granted', 'last_completed_step': 'plan_preferences', 'next_step': None, 'captured_fields': {'postcode': '3000', 'property_type': 'house', 'current_provider': 'synthetic-provider-a', 'usage_pattern': 'standard', 'plan_preferences': 'none'}, 'clarification_attempts': 0}\n\nCurrent approved scripts:\n- Opening / recording disclosure: Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?\n- Consent clarification (use once only): To confirm, may I continue this recorded call and ask the Energy journey questions?\n- Journey context: You previously started an Energy comparison journey. I can help complete the remaining questions. Is that right?\n- Next field question: \n- No advice: I can collect the information needed to complete the comparison journey, but I can't recommend a provider or plan. I can connect you with a team member if you would like advice.\n- Payment boundary: Please don't share card or payment details over this call. I'll connect you with a team member through the approved secure process.\n- Decline: Understood. I won't continue. Thank you for your time.\n- Handoff: I'm going to connect you with a team member so you don't need to repeat what you've already told me. I'll pass on the progress and the reason for the transfer.\n\nHard rules:\n1. Do not collect journey fields until FastAPI returns consent_status=granted via a tool.\n2. After consent, confirm the unfinished journey before asking field questions.\n3. Collect only the current next_step from FastAPI. Allowed fields in order: postcode, property_type, current_provider, usage_pattern, plan_preferences.\n4. Never recommend a provider, plan, saving, cheapest option or financial outcome.\n5. Never ask for or repeat card, payment, BSB, account, CVV, OTP or security-code values.\n6. If the customer declines, says no, or does not consent, call end_call. Do not retry.\n7. If the customer asks for a human, sounds angry or confused after one clarification, or asks an off-script question, call create_handoff.\n8. If payment is mentioned, call create_handoff with trigger payment_mentioned. Do not include the value.\n9. Do not say the journey is complete until submit_test_payload returns accepted.\n10. Keep customer speech simple. Do not mention MongoDB, Temporal, tools, or internal IDs.\n\nYou must use tools for every state-changing action. Deepgram may propose a value. FastAPI decides.\n"
+      }
+    },
+    "Deepgram.docs_mcp": {
+      "ok": true,
+      "status_code": 401,
+      "reaction": "HTTP MCP endpoint reachable",
+      "body_preview": "{\"status_code\":401,\"detail\":\"Authentication required\"}"
+    },
+    "Deepgram.websocket": {
+      "ok": true,
+      "endpoint": "wss://agent.deepgram.com/v1/agent/converse",
+      "welcome": true,
+      "settings_applied": true,
+      "error": null,
+      "reaction": "SettingsApplied"
+    },
+    "Deepgram.session": {
+      "status_code": 200,
+      "enabled": true,
+      "endpoint": "wss://agent.deepgram.com/v1/agent/converse",
+      "tools": [
+        "record_consent",
+        "confirm_journey_context",
+        "get_next_field",
+        "submit_field_candidate",
+        "confirm_fields",
+        "submit_test_payload",
+        "create_handoff",
+        "end_call"
+      ],
+      "mcp": {
+        "cli": {
+          "command": "dg",
+          "args": [
+            "mcp"
+          ]
+        },
+        "docs": "https://api.dx.deepgram.com/kapa/mcp"
+      },
+      "reaction": "returned Voice Agent Settings and FastAPI-owned tools"
+    }
+  },
+  "pass": true,
+  "final_lead": {
+    "lead_id": "energy-lead-001",
+    "vertical": "energy",
+    "customer_label": "Synthetic Customer 001",
+    "test_phone": "+61 400 000 101",
+    "synthetic": true,
+    "dnc_status": "clear",
+    "journey_status": "completed",
+    "last_completed_step": "plan_preferences",
+    "next_step": null,
+    "captured_fields": {
+      "postcode": "3000",
+      "property_type": "house",
+      "current_provider": "synthetic-provider-a",
+      "usage_pattern": "standard",
+      "plan_preferences": "none"
+    },
+    "consent_status": "granted",
+    "outcome": "Journey submitted with approved test payload",
+    "active_call_id": "call-a1c7f76f50dd",
+    "call_state": "completed",
+    "harness_state": "completed",
+    "clarification_attempts": 0,
+    "submission_result": {
+      "submission_id": "submission-40ce8402f50e",
+      "lead_id": "energy-lead-001",
+      "payload": {
+        "postcode": "3000",
+        "property_type": "house",
+        "current_provider": "synthetic-provider-a",
+        "usage_pattern": "standard",
+        "plan_preferences": "none"
+      },
+      "status": "accepted",
+      "created_at": "2026-09-19T08:18:27.075806Z"
+    }
+  },
+  "final_events": [
+    {
+      "event_id": "evt-a39fbcae7806",
+      "call_id": "call-a1c7f76f50dd",
+      "lead_id": "energy-lead-001",
+      "event_type": "call_started",
+      "message": "DNC clear. twilio call path started and opening consent script presented.",
+      "guardrail": "consent_first",
+      "created_at": "2026-09-19T08:18:09.589176Z",
+      "metadata": {
+        "call_provider": {
+          "mode": "live_error",
+          "provider": "twilio",
+          "to": "+61 400 000 101",
+          "error_type": "TwilioRestException",
+          "error": "HTTP 400 error: Unable to create record: The number +61400000101 is unverified. Trial accounts may only make calls to verified numbers."
+        },
+        "temporal_plan": {
+          "workflow": "CIMEnergyRecoveryWorkflow",
+          "address": "quickstart-arshadar-119cbcfa.e67ef.tmprl.cloud:7233",
+          "namespace": "quickstart-arshadar-119cbcfa.e67ef",
+          "api_key_id": "[redacted]",
+          "tls": true,
+          "task_queue": "cimenergy-recovery",
+          "lead_id": "energy-lead-001",
+          "steps": [
+            "dnc_gate",
+            "start_twilio_test_call",
+            "deepgram_voice_agent",
+            "azure_intent_guardrail_classification",
+            "tinyfish_submission_or_local_sandbox",
+            "handoff_or_completion"
+          ]
+        },
+        "previous_call_id": null,
+        "resume_step": "property_type",
+        "completed_fields": {
+          "postcode": "3000"
+        }
+      }
+    },
+    {
+      "event_id": "evt-ab4c5938e923",
+      "call_id": "call-a1c7f76f50dd",
+      "lead_id": "energy-lead-001",
+      "event_type": "consent_granted",
+      "message": "Affirmative consent captured. Field collection may begin.",
+      "guardrail": "consent_first",
+      "created_at": "2026-09-19T08:18:11.581566Z",
+      "metadata": {}
+    },
+    {
+      "event_id": "evt-aa9647a5e652",
+      "call_id": "call-a1c7f76f50dd",
+      "lead_id": "energy-lead-001",
+      "event_type": "journey_context_confirmed",
+      "message": "Customer confirmed the unfinished Energy comparison journey.",
+      "guardrail": null,
+      "created_at": "2026-09-19T08:18:13.318201Z",
+      "metadata": {
+        "next_step": "property_type",
+        "missing_fields": [
+          "property_type",
+          "current_provider",
+          "usage_pattern",
+          "plan_preferences"
+        ]
+      }
+    },
+    {
+      "event_id": "evt-fc9f1c666e5b",
+      "call_id": "call-a1c7f76f50dd",
+      "lead_id": "energy-lead-001",
+      "event_type": "field_candidate_received",
+      "message": "Voice layer proposed property_type.",
+      "guardrail": null,
+      "created_at": "2026-09-19T08:18:15.656002Z",
+      "metadata": {
+        "field": "property_type",
+        "synthetic": true
+      }
+    },
+    {
+      "event_id": "evt-4b618d1597ee",
+      "call_id": "call-a1c7f76f50dd",
+      "lead_id": "energy-lead-001",
+      "event_type": "field_capture",
+      "message": "Captured fields: property_type.",
+      "guardrail": null,
+      "created_at": "2026-09-19T08:18:16.139327Z",
+      "metadata": {
+        "fields": {
+          "property_type": "house"
+        }
+      }
+    },
+    {
+      "event_id": "evt-565500504b5f",
+      "call_id": "call-a1c7f76f50dd",
+      "lead_id": "energy-lead-001",
+      "event_type": "field_candidate_received",
+      "message": "Voice layer proposed current_provider.",
+      "guardrail": null,
+      "created_at": "2026-09-19T08:18:18.099704Z",
+      "metadata": {
+        "field": "current_provider",
+        "synthetic": true
+      }
+    },
+    {
+      "event_id": "evt-5083117433d8",
+      "call_id": "call-a1c7f76f50dd",
+      "lead_id": "energy-lead-001",
+      "event_type": "field_capture",
+      "message": "Captured fields: current_provider.",
+      "guardrail": null,
+      "created_at": "2026-09-19T08:18:18.571252Z",
+      "metadata": {
+        "fields": {
+          "current_provider": "synthetic-provider-a"
+        }
+      }
+    },
+    {
+      "event_id": "evt-ff29e6e302fe",
+      "call_id": "call-a1c7f76f50dd",
+      "lead_id": "energy-lead-001",
+      "event_type": "field_candidate_received",
+      "message": "Voice layer proposed usage_pattern.",
+      "guardrail": null,
+      "created_at": "2026-09-19T08:18:20.540762Z",
+      "metadata": {
+        "field": "usage_pattern",
+        "synthetic": true
+      }
+    },
+    {
+      "event_id": "evt-83779fe0c61e",
+      "call_id": "call-a1c7f76f50dd",
+      "lead_id": "energy-lead-001",
+      "event_type": "field_capture",
+      "message": "Captured fields: usage_pattern.",
+      "guardrail": null,
+      "created_at": "2026-09-19T08:18:21.010827Z",
+      "metadata": {
+        "fields": {
+          "usage_pattern": "standard"
+        }
+      }
+    },
+    {
+      "event_id": "evt-40e01bea0fe6",
+      "call_id": "call-a1c7f76f50dd",
+      "lead_id": "energy-lead-001",
+      "event_type": "field_candidate_received",
+      "message": "Voice layer proposed plan_preferences.",
+      "guardrail": null,
+      "created_at": "2026-09-19T08:18:22.977000Z",
+      "metadata": {
+        "field": "plan_preferences",
+        "synthetic": true
+      }
+    },
+    {
+      "event_id": "evt-6890e3fc899e",
+      "call_id": "call-a1c7f76f50dd",
+      "lead_id": "energy-lead-001",
+      "event_type": "field_capture",
+      "message": "Captured fields: plan_preferences.",
+      "guardrail": null,
+      "created_at": "2026-09-19T08:18:23.449712Z",
+      "metadata": {
+        "fields": {
+          "plan_preferences": "none"
+        }
+      }
+    },
+    {
+      "event_id": "evt-d461c4f5fad9",
+      "call_id": "call-a1c7f76f50dd",
+      "lead_id": "energy-lead-001",
+      "event_type": "field_confirmed",
+      "message": "Customer confirmed the collected Energy fields.",
+      "guardrail": null,
+      "created_at": "2026-09-19T08:18:25.425238Z",
+      "metadata": {
+        "fields": {
+          "postcode": "3000",
+          "property_type": "house",
+          "current_provider": "synthetic-provider-a",
+          "usage_pattern": "standard",
+          "plan_preferences": "none"
+        },
+        "synthetic": true
+      }
+    },
+    {
+      "event_id": "evt-9a4406a98714",
+      "call_id": "call-a1c7f76f50dd",
+      "lead_id": "energy-lead-001",
+      "event_type": "journey_submitted",
+      "message": "Validated Energy payload submitted via local_sandbox.",
+      "guardrail": null,
+      "created_at": "2026-09-19T08:18:27.548544Z",
+      "metadata": {
+        "submission_provider": {
+          "mode": "sandbox",
+          "status": "accepted",
+          "provider": "local_sandbox"
+        }
+      }
+    },
+    {
+      "event_id": "evt-24fe524008af",
+      "call_id": "call-a1c7f76f50dd",
+      "lead_id": "energy-lead-001",
+      "event_type": "call_ended",
+      "message": "Voice agent requested end_call (completed).",
+      "guardrail": null,
+      "created_at": "2026-09-19T08:18:28.827710Z",
+      "metadata": {
+        "reason": "completed",
+        "synthetic": true
+      }
+    }
+  ],
+  "final_submissions": [
+    {
+      "submission_id": "submission-40ce8402f50e",
+      "lead_id": "energy-lead-001",
+      "payload": {
+        "postcode": "3000",
+        "property_type": "house",
+        "current_provider": "synthetic-provider-a",
+        "usage_pattern": "standard",
+        "plan_preferences": "none"
+      },
+      "status": "accepted",
+      "created_at": "2026-09-19T08:18:27.075806Z"
+    }
+  ],
+  "finished_at": "2026-09-19T08:18:31.390545+00:00"
+}

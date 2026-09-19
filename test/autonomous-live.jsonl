@@ -1,0 +1,504 @@
+{"lead_id": "energy-lead-001", "kind": "session_started", "call_id": "call-3697a2c781fa", "message": "Recovery call started. The journey will resume after consent."}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "Welcome", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "SettingsApplied", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "energy-lead-001", "kind": "customer_thinking", "turn": 0, "mood": "cooperative", "text": "Yeah that's okay."}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "AgentAudioDone", "role": null}
+{"lead_id": "energy-lead-001", "kind": "customer_injected", "turn": 0, "via": "text"}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "Error", "role": null}
+{"lead_id": "energy-lead-001", "kind": "customer_thinking", "turn": 1, "mood": "frustrated", "text": "No, I don't want to be recorded."}
+{"lead_id": "energy-lead-001", "kind": "error", "message": "ConnectionClosedOK: received 1005 (no status received [internal]); then sent 1005 (no status received [internal])"}
+{"lead_id": "energy-lead-001", "kind": "session_finished", "call_id": "call-3697a2c781fa", "ok": false, "turns": 2}
+{"lead_id": "energy-lead-001", "kind": "session_started", "call_id": "call-a0811765aa39", "message": "Recovery call started. The journey will resume after consent."}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "Welcome", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "SettingsApplied", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "energy-lead-001", "kind": "customer_thinking", "turn": 0, "mood": "cooperative", "text": "Yeah that's okay."}
+{"lead_id": "energy-lead-001", "kind": "customer_injected", "turn": 0, "via": "inject", "has_pcm": false, "has_mp3": false}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "UserStartedSpeaking", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "AgentAudioDone", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "ConversationText", "role": "user"}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "History", "role": "user"}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "EndOfTurn", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "PromptUpdated", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-001", "kind": "customer_thinking", "turn": 1, "mood": "curious", "text": "Can I just talk to a person?"}
+{"lead_id": "energy-lead-001", "kind": "customer_injected", "turn": 1, "via": "inject", "has_pcm": false, "has_mp3": false}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "UserStartedSpeaking", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "AgentAudioDone", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "ConversationText", "role": "user"}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "History", "role": "user"}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "EndOfTurn", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "PromptUpdated", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-001", "kind": "stopped", "reason": "handoff_required", "turn": 2}
+{"lead_id": "energy-lead-001", "kind": "session_finished", "call_id": "call-a0811765aa39", "ok": true, "turns": 2}
+{"lead_id": "energy-lead-002", "kind": "session_started", "call_id": "call-913f1aee1543", "message": "Recovery call started. The journey will resume after consent."}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "Welcome", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "SettingsApplied", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "energy-lead-002", "kind": "customer_thinking", "turn": 0, "mood": "cooperative", "text": "Yeah that's okay."}
+{"lead_id": "energy-lead-002", "kind": "customer_injected", "turn": 0, "via": "inject", "has_mp3": false}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "UserStartedSpeaking", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "AgentAudioDone", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "ConversationText", "role": "user"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "History", "role": "user"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "EndOfTurn", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "PromptUpdated", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "customer_thinking", "turn": 1, "mood": "curious", "text": "Which plan would save me the most money though?"}
+{"lead_id": "energy-lead-002", "kind": "customer_injected", "turn": 1, "via": "inject", "has_mp3": false}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "UserStartedSpeaking", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "AgentAudioDone", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "ConversationText", "role": "user"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "History", "role": "user"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "EndOfTurn", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "customer_thinking", "turn": 2, "mood": "confused", "text": "Not sure, whatever came with the place."}
+{"lead_id": "energy-lead-002", "kind": "customer_injected", "turn": 2, "via": "inject", "has_mp3": false}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "UserStartedSpeaking", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "AgentAudioDone", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "ConversationText", "role": "user"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "History", "role": "user"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "EndOfTurn", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "PromptUpdated", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "customer_thinking", "turn": 3, "mood": "curious", "text": "AGL."}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "AgentAudioDone", "role": null}
+{"lead_id": "energy-lead-002", "kind": "customer_injected", "turn": 3, "via": "inject", "has_mp3": false}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "UserStartedSpeaking", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "ConversationText", "role": "user"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "History", "role": "user"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "EndOfTurn", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "PromptUpdated", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "customer_thinking", "turn": 4, "mood": "confused", "text": "I don't really follow. Can you say that again?"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "energy-lead-002", "kind": "customer_injected", "turn": 4, "via": "inject", "has_mp3": false}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "UserStartedSpeaking", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "AgentAudioDone", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "ConversationText", "role": "user"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "History", "role": "user"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "EndOfTurn", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "customer_thinking", "turn": 5, "mood": "cooperative", "text": "Pretty low, just me."}
+{"lead_id": "energy-lead-002", "kind": "customer_injected", "turn": 5, "via": "inject", "has_mp3": false}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "UserStartedSpeaking", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "AgentAudioDone", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "ConversationText", "role": "user"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "History", "role": "user"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "EndOfTurn", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "PromptUpdated", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-002", "kind": "session_finished", "call_id": "call-913f1aee1543", "ok": true, "turns": 6}
+{"lead_id": "inbound-0fba3941", "kind": "session_started", "call_id": "call-2d5b6628c278", "message": "Recovery call started. The journey will resume after consent."}
+{"lead_id": "inbound-0fba3941", "kind": "session_started", "call_id": "call-de867def7733", "message": "Recovery call started. The journey will resume after consent."}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "Welcome", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "Welcome", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "SettingsApplied", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "SettingsApplied", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "inbound-0fba3941", "kind": "customer_thinking", "turn": 0, "mood": "cooperative", "text": "Yeah that's okay."}
+{"lead_id": "inbound-0fba3941", "kind": "customer_thinking", "turn": 0, "mood": "cooperative", "text": "Yeah that's okay."}
+{"lead_id": "inbound-0fba3941", "kind": "customer_injected", "turn": 0, "via": "inject", "has_mp3": false}
+{"lead_id": "inbound-0fba3941", "kind": "customer_injected", "turn": 0, "via": "inject", "has_mp3": false}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "UserStartedSpeaking", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "UserStartedSpeaking", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "AgentAudioDone", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "ConversationText", "role": "user"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "AgentAudioDone", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "ConversationText", "role": "user"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": "user"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "EndOfTurn", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": "user"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "EndOfTurn", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "PromptUpdated", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "customer_thinking", "turn": 1, "mood": "curious", "text": "Can I just talk to a person?"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "customer_injected", "turn": 1, "via": "inject", "has_mp3": false}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "UserStartedSpeaking", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "AgentAudioDone", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "ConversationText", "role": "user"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": "user"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "EndOfTurn", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "PromptUpdated", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "stopped", "reason": "handoff_required", "turn": 2}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "session_finished", "call_id": "call-de867def7733", "ok": true, "turns": 2}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "stopped", "reason": "handoff_required", "turn": 1}
+{"lead_id": "inbound-0fba3941", "kind": "session_finished", "call_id": "call-2d5b6628c278", "ok": true, "turns": 1}
+{"lead_id": "energy-lead-001", "kind": "session_started", "call_id": "call-05b5b1b6fd83", "message": "Recovery call started. The journey will resume after consent."}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "Welcome", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "SettingsApplied", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "energy-lead-001", "kind": "customer_thinking", "turn": 0, "mood": "cooperative", "text": "Yeah that's okay."}
+{"lead_id": "energy-lead-001", "kind": "customer_injected", "turn": 0, "via": "inject", "has_mp3": false}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "UserStartedSpeaking", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "AgentAudioDone", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "ConversationText", "role": "user"}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "History", "role": "user"}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "EndOfTurn", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "PromptUpdated", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-001", "kind": "customer_thinking", "turn": 1, "mood": "curious", "text": "Do I need to give you a card now or what?"}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "energy-lead-001", "kind": "customer_injected", "turn": 1, "via": "inject", "has_mp3": false}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "UserStartedSpeaking", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "AgentAudioDone", "role": null}
+{"lead_id": "energy-lead-001", "kind": "deepgram", "event_type": "ConversationText", "role": "user"}
+{"lead_id": "energy-lead-001", "kind": "stopped", "reason": "handoff_required", "turn": 2}
+{"lead_id": "energy-lead-001", "kind": "session_finished", "call_id": "call-05b5b1b6fd83", "ok": true, "turns": 2}
+{"lead_id": "inbound-0fba3941", "kind": "session_started", "call_id": "call-58bc8855f16c", "message": "Recovery call started. The journey will resume after consent."}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "Welcome", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "SettingsApplied", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "inbound-0fba3941", "kind": "customer_thinking", "turn": 0, "mood": "cooperative", "text": "Yeah that's okay."}
+{"lead_id": "inbound-0fba3941", "kind": "customer_injected", "turn": 0, "via": "inject", "has_mp3": false}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "UserStartedSpeaking", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "AgentAudioDone", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "ConversationText", "role": "user"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": "user"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "EndOfTurn", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "PromptUpdated", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "customer_thinking", "turn": 1, "mood": "curious", "text": "Can I just talk to a person?"}
+{"lead_id": "inbound-0fba3941", "kind": "customer_injected", "turn": 1, "via": "inject", "has_mp3": false}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "UserStartedSpeaking", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "AgentAudioDone", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "ConversationText", "role": "user"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": "user"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "EndOfTurn", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "PromptUpdated", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "stopped", "reason": "handoff_required", "turn": 2}
+{"lead_id": "inbound-0fba3941", "kind": "session_finished", "call_id": "call-58bc8855f16c", "ok": true, "turns": 2}
+{"lead_id": "energy-lead-005", "kind": "session_started", "call_id": "call-82cb064be1c7", "message": "Recovery call started. The journey will resume after consent."}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "Welcome", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "SettingsApplied", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "energy-lead-005", "kind": "customer_thinking", "turn": 0, "mood": "cooperative", "text": "Yeah that's okay."}
+{"lead_id": "energy-lead-005", "kind": "customer_injected", "turn": 0, "via": "inject", "has_mp3": false}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "UserStartedSpeaking", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "AgentAudioDone", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "ConversationText", "role": "user"}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "History", "role": "user"}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "EndOfTurn", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "PromptUpdated", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "PromptUpdated", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "customer_thinking", "turn": 1, "mood": "curious", "text": "Unit actually."}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "AgentAudioDone", "role": null}
+{"lead_id": "energy-lead-005", "kind": "customer_injected", "turn": 1, "via": "inject", "has_mp3": false}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "UserStartedSpeaking", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "ConversationText", "role": "user"}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "History", "role": "user"}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "EndOfTurn", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "PromptUpdated", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "customer_thinking", "turn": 2, "mood": "confused", "text": "Not sure, whatever came with the place."}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "AgentAudioDone", "role": null}
+{"lead_id": "energy-lead-005", "kind": "customer_injected", "turn": 2, "via": "inject", "has_mp3": false}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "UserStartedSpeaking", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "ConversationText", "role": "user"}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "History", "role": "user"}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "EndOfTurn", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "PromptUpdated", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "customer_thinking", "turn": 3, "mood": "curious", "text": "Which one is cheapest?"}
+{"lead_id": "energy-lead-005", "kind": "customer_injected", "turn": 3, "via": "inject", "has_mp3": false}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "AgentAudioDone", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "UserStartedSpeaking", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "ConversationText", "role": "user"}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "History", "role": "user"}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "EndOfTurn", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "PromptUpdated", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "energy-lead-005", "kind": "stopped", "reason": "handoff_required", "turn": 4}
+{"lead_id": "energy-lead-005", "kind": "session_finished", "call_id": "call-82cb064be1c7", "ok": true, "turns": 4}
+{"lead_id": "inbound-0fba3941", "kind": "session_started", "call_id": "call-164ddf2c4a12", "message": "Recovery call started. The journey will resume after consent."}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "Welcome", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "SettingsApplied", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "inbound-0fba3941", "kind": "customer_thinking", "turn": 0, "mood": "cooperative", "text": "Yeah that's okay."}
+{"lead_id": "inbound-0fba3941", "kind": "customer_injected", "turn": 0, "via": "inject", "has_mp3": false}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "UserStartedSpeaking", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "AgentAudioDone", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "ConversationText", "role": "user"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": "user"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "EndOfTurn", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "PromptUpdated", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "customer_thinking", "turn": 1, "mood": "curious", "text": "Can I just talk to a person?"}
+{"lead_id": "inbound-0fba3941", "kind": "customer_injected", "turn": 1, "via": "inject", "has_mp3": false}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "UserStartedSpeaking", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "AgentAudioDone", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "ConversationText", "role": "user"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": "user"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "EndOfTurn", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallRequest", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "FunctionCallResponse", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "PromptUpdated", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "ConversationText", "role": "assistant"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "History", "role": "assistant"}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "deepgram", "event_type": "LatencyReport", "role": null}
+{"lead_id": "inbound-0fba3941", "kind": "stopped", "reason": "handoff_required", "turn": 2}
+{"lead_id": "inbound-0fba3941", "kind": "session_finished", "call_id": "call-164ddf2c4a12", "ok": true, "turns": 2}
