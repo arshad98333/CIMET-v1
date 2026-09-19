@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "deepgram": {
+      "type": "stdio",
+      "command": "dg",
+      "args": ["mcp"]
+    },
+    "deepgram-docs": {
+      "type": "http",
+      "url": "https://api.dx.deepgram.com/kapa/mcp"
+    },
+    "tinyfish": {
+      "url": "https://agent.tinyfish.ai/mcp"
+    }
+  }
+}

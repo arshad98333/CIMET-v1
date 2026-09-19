@@ -1,0 +1,102 @@
+[
+  {
+    "role": "assistant",
+    "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+    "source": "autonomous"
+  },
+  {
+    "role": "user",
+    "text": "Yeah that's okay.",
+    "source": "elevenlabs"
+  },
+  {
+    "role": "user",
+    "text": "Yeah that's okay.",
+    "source": "autonomous"
+  },
+  {
+    "role": "assistant",
+    "text": "You previously started an Energy comparison journey.",
+    "source": "autonomous"
+  },
+  {
+    "role": "user",
+    "text": "Which plan would save me the most money though?",
+    "source": "elevenlabs"
+  },
+  {
+    "role": "user",
+    "text": "Which plan would save me the most money though?",
+    "source": "autonomous"
+  },
+  {
+    "role": "assistant",
+    "text": "I can collect the information needed to complete the comparison journey, but I can't recommend a provider or plan.",
+    "source": "autonomous"
+  },
+  {
+    "role": "user",
+    "text": "Not sure, whatever came with the place.",
+    "source": "elevenlabs"
+  },
+  {
+    "role": "user",
+    "text": "Not sure, whatever came with the place.",
+    "source": "autonomous"
+  },
+  {
+    "role": "assistant",
+    "text": "Who is your current energy provider?",
+    "source": "autonomous"
+  },
+  {
+    "role": "user",
+    "text": "AGL.",
+    "source": "elevenlabs"
+  },
+  {
+    "role": "user",
+    "text": "AGL.",
+    "source": "autonomous"
+  },
+  {
+    "role": "assistant",
+    "text": "Thank you.",
+    "source": "autonomous"
+  },
+  {
+    "role": "assistant",
+    "text": "How would you describe your usual energy usage: low, standard, or high?",
+    "source": "autonomous"
+  },
+  {
+    "role": "user",
+    "text": "I don't really follow. Can you say that again?",
+    "source": "elevenlabs"
+  },
+  {
+    "role": "user",
+    "text": "I don't really follow. Can you say that again?",
+    "source": "autonomous"
+  },
+  {
+    "role": "assistant",
+    "text": "How would you describe your usual energy usage?",
+    "source": "autonomous"
+  },
+  {
+    "role": "user",
+    "text": "Pretty low, just me.",
+    "source": "elevenlabs"
+  },
+  {
+    "role": "user",
+    "text": "Pretty low, just me.",
+    "source": "autonomous"
+  },
+  {
+    "role": "assistant",
+    "text": "Thank you.",
+    "source": "autonomous"
+  }
+]

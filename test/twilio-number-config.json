@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "phone_number": "+19378586417",
+  "friendly_name": "(937) 858-6417",
+  "voice_url": "https://cardboard-hesitancy-renewably.ngrok-free.dev/api/voice/inbound",
+  "voice_method": "POST",
+  "voice_fallback_url": "https://cardboard-hesitancy-renewably.ngrok-free.dev/api/voice/inbound",
+  "status_callback": "https://cardboard-hesitancy-renewably.ngrok-free.dev/api/voice/status",
+  "media_ws": "wss://cardboard-hesitancy-renewably.ngrok-free.dev/api/voice/media",
+  "updated": true,
+  "before": {
+    "phone_number": "+19378586417",
+    "friendly_name": "(937) 858-6417",
+    "voice_url": "https://cardboard-hesitancy-renewably.ngrok-free.dev/api/voice/inbound",
+    "voice_method": "POST",
+    "voice_fallback_url": null,
+    "status_callback": "https://cardboard-hesitancy-renewably.ngrok-free.dev/api/voice/status"
+  },
+  "path": "mobile -> Twilio DID -> POST /api/voice/inbound -> TwiML Say + Connect Stream -> Deepgram Voice Agent -> dashboard /api/live/*"
+}

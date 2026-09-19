@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CIMEnergy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/styles.css?v=hack5" />
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="nav">
+        <div class="brand">
+          <span class="mark">C</span>
+          <div>
+            <strong>CIMEnergy</strong>
+            <small>Recovery</small>
+          </div>
+        </div>
+        <nav>
+          <button class="nav-item active" data-view="callme">Call me</button>
+          <button class="nav-item" data-view="overview">Home</button>
+          <button class="nav-item" data-view="queue">Queue</button>
+          <button class="nav-item" data-view="lab">Lab</button>
+          <button class="nav-item" data-view="scripts">Scripts</button>
+          <button class="nav-item" data-view="inbound">Calls</button>
+          <button class="nav-item" data-view="drafts">Drafts</button>
+        </nav>
+      </aside>
+
+      <div class="main">
+        <header class="top">
+          <div>
+            <p class="kicker" id="viewKicker">Call me</p>
+            <h1 id="viewTitle">Energy agent</h1>
+          </div>
+          <div class="top-meta">
+            <span class="did-chip" id="headerDid">Dial +1 (937) 858-6417</span>
+            <span class="live-dot" id="liveDot"></span>
+            <span id="liveLabel">Idle</span>
+            <button class="ghost" id="refreshButton">Refresh</button>
+          </div>
+        </header>
+        <div id="alertBar" class="alert hidden"></div>
+        <aside id="opsLog" class="ops-log" aria-live="polite"></aside>
+
+        <section id="view-callme" class="view">
+          <article class="card callme-hero">
+            <p class="kicker" id="callmeStatus">Ready</p>
+            <p class="callme-number" id="callmeDid">+1 (937) 858-6417</p>
+            <p class="muted">Chat from this laptop as the customer, or call this number from a mobile. The form updates as the agent collects the journey.</p>
+            <div class="laptop-chat-controls">
+              <select id="callmeLead"></select>
+              <button id="browserVoiceStart">Start voice call</button>
+              <button id="browserVoiceEnd" class="ghost" disabled>Stop voice</button>
+              <button id="browserChatStart">Start laptop chat</button>
+              <button id="browserChatEnd" class="ghost" disabled>End</button>
+            </div>
+          </article>
+          <div class="split">
+            <article class="card chat-card">
+              <div class="chat-head">
+                <h3>Live call</h3>
+                <span class="muted" id="browserChatState">Phone or laptop</span>
+              </div>
+              <div class="chat-thread" id="callmeTranscript"></div>
+              <form id="browserChatForm" class="browser-chat-form">
+                <button type="button" id="browserMic" class="ghost">Mic</button>
+                <input id="browserCustomerText" autocomplete="off" placeholder="Type as the customer..." />
+                <button type="submit">Send</button>
+              </form>
+            </article>
+            <article class="card">
+              <h3>Energy form</h3>
+              <div id="callmeForm" class="field-list"></div>
+              <div class="actions" style="margin-top:14px">
+                <button id="callmeApprove" disabled>Send form</button>
+                <button id="callmeReport" class="ghost">Report PDF</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="view-overview" class="view hidden">
+          <section class="hooks" id="hooks"></section>
+          <section class="integrations" id="integrationRows"></section>
+          <article class="card chat-card">
+            <div class="chat-head">
+              <h2>Live conversation</h2>
+              <span class="muted" id="overviewHint">Call +1 (937) 858-6417 from your mobile. The live thread fills as soon as the call connects.</span>
+            </div>
+            <div class="chat-thread" id="homeTranscript"></div>
+          </article>
+        </section>
+
+        <section id="view-queue" class="view hidden">
+          <div class="workspace">
+            <aside class="list-pane">
+              <div class="pane-head">
+                <h2>Queue</h2>
+                <p class="did-line" id="queueDid">Dial +1 (937) 858-6417</p>
+              </div>
+              <div id="leadRows" class="rows"></div>
+            </aside>
+            <section class="detail-pane">
+              <div id="emptyState" class="empty">Select a record</div>
+              <div id="detailState" class="hidden">
+                <div class="detail-head">
+                  <div>
+                    <p class="kicker" id="leadPhone"></p>
+                    <h2 id="leadTitle"></h2>
+                  </div>
+                  <div class="actions">
+                    <button id="startCallButton">Start</button>
+                    <button id="submitButton" class="ghost">Queue draft</button>
+                    <button id="detailReportButton" class="ghost">Report PDF</button>
+                  </div>
+                </div>
+                <div class="script-box hidden" id="scriptBox"></div>
+                <article class="card chat-card">
+                  <h3>Conversation</h3>
+                  <div class="chat-thread" id="queueTranscript"></div>
+                </article>
+                <div class="split">
+                  <article class="card"><h3>Journey</h3><dl class="facts" id="journeyFacts"></dl></article>
+                  <article class="card"><h3>Sales form</h3><div id="capturedFields" class="field-list"></div></article>
+                </div>
+                <article class="card">
+                  <h3>Controls</h3>
+                  <div class="simulator-buttons">
+                    <button data-event="consent_granted">Consent</button>
+                    <button data-event="consent_declined">No consent</button>
+                    <button data-event="advice_requested">Advice</button>
+                    <button data-event="payment_mentioned">Payment</button>
+                    <button data-event="customer_declined">Decline</button>
+                    <button data-event="human_requested">Human</button>
+                    <button data-event="angry">Frustrated</button>
+                  </div>
+                  <form id="fieldForm" class="field-form">
+                    <label>Field
+                      <select id="fieldName">
+                        <option value="postcode">Postcode</option>
+                        <option value="property_type">Property type</option>
+                        <option value="current_provider">Current provider</option>
+                        <option value="usage_pattern">Usage pattern</option>
+                        <option value="plan_preferences">Plan preferences</option>
+                      </select>
+                    </label>
+                    <label>Value <input id="fieldValue" autocomplete="off" /></label>
+                    <button type="submit">Capture</button>
+                  </form>
+                </article>
+                <div class="split">
+                  <article class="card"><h3>Activity</h3><div id="events" class="timeline"></div></article>
+                  <article class="card"><h3>Outcome</h3><div id="handoff" class="handoff"></div></article>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section id="view-lab" class="view hidden">
+          <article class="card chat-card">
+            <div class="detail-head">
+              <div>
+                <p class="kicker">Customer lab</p>
+                <h2>Autonomous conversation</h2>
+              </div>
+              <div class="actions">
+                <select id="labLead"></select>
+                <button id="labStart">Open</button>
+                <button id="labTurn" class="ghost">Turn</button>
+                <button id="labAuto">Live</button>
+              </div>
+            </div>
+            <div class="chat-thread" id="labTranscript"></div>
+          </article>
+        </section>
+
+        <section id="view-scripts" class="view hidden">
+          <article class="card">
+            <div class="detail-head">
+              <div>
+                <p class="kicker">Ingest</p>
+                <h2>Call scripts</h2>
+              </div>
+              <form id="scriptForm" class="actions">
+                <select id="scriptLead"></select>
+                <input type="file" id="scriptFile" accept=".pdf,.txt,.md" />
+                <button type="submit">Upload</button>
+              </form>
+            </div>
+            <form id="leadImportForm" class="actions" style="margin-bottom:14px">
+              <input type="file" id="leadImportFile" accept=".csv,.json" />
+              <button type="submit" class="ghost">Upload leads</button>
+            </form>
+            <div id="scriptList" class="stack"></div>
+          </article>
+        </section>
+
+        <section id="view-inbound" class="view hidden">
+          <article class="card chat-card">
+            <div class="detail-head">
+              <div>
+                <p class="kicker">Calls</p>
+                <h2 id="inboundDidTitle">+1 (937) 858-6417</h2>
+              </div>
+              <div class="actions">
+                <select id="inboundLead"></select>
+                <button id="placeTwilioCall">Show number</button>
+                <button id="syncTwilio" class="ghost">Sync number</button>
+              </div>
+            </div>
+            <dl class="facts" id="inboundFacts"></dl>
+            <div class="chat-thread" id="inboundTranscript"></div>
+            <section class="recordings-panel">
+              <div class="chat-head">
+                <h3>Conversation audio</h3>
+                <span class="muted" id="recordingCount">No recordings</span>
+              </div>
+              <div id="inboundRecordings" class="recording-list"></div>
+            </section>
+          </article>
+        </section>
+
+        <section id="view-drafts" class="view hidden">
+          <article class="card">
+            <p class="kicker">Approvals</p>
+            <h2>Sales drafts</h2>
+            <div id="draftList" class="stack"></div>
+          </article>
+        </section>
+      </div>
+    </div>
+    <script src="/assets/app.js?v=hack5"></script>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+{
+  "lead_id": "energy-lead-001",
+  "lines": [
+    {
+      "ts": "2026-09-19 08:59:14.065430+00:00",
+      "role": "assistant",
+      "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 08:59:18.632388+00:00",
+      "role": "user",
+      "text": "Yeah that's okay.",
+      "source": "elevenlabs",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 08:59:21.154900+00:00",
+      "role": "user",
+      "text": "No, I don't want to be recorded.",
+      "source": "elevenlabs",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:00:48.292664+00:00",
+      "role": "assistant",
+      "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:00:50.418358+00:00",
+      "role": "user",
+      "text": "Yeah that's okay.",
+      "source": "elevenlabs",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:00:51.236440+00:00",
+      "role": "user",
+      "text": "Yeah that's okay.",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:00:54.353216+00:00",
+      "role": "assistant",
+      "text": "You previously started an Energy comparison journey.",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:00:56.616483+00:00",
+      "role": "user",
+      "text": "Can I just talk to a person?",
+      "source": "elevenlabs",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:00:57.385738+00:00",
+      "role": "user",
+      "text": "Can I just talk to a person?",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:01:01.219717+00:00",
+      "role": "assistant",
+      "text": "I'm going to connect you with a team member so you don't need to repeat what you've already told me.",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:39:51.961462+00:00",
+      "role": "assistant",
+      "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:39:53.571792+00:00",
+      "role": "user",
+      "text": "Yeah that's okay.",
+      "source": "elevenlabs",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:39:54.631982+00:00",
+      "role": "user",
+      "text": "Yeah that's okay.",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:39:57.870103+00:00",
+      "role": "assistant",
+      "text": "You previously started an Energy comparison journey.",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:40:01.110668+00:00",
+      "role": "user",
+      "text": "[redacted-sensitive]",
+      "source": "elevenlabs",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:40:01.233969+00:00",
+      "role": "assistant",
+      "text": "I can help complete the remaining questions.",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:53:43.658455+00:00",
+      "role": "assistant",
+      "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+      "source": "browser_opening",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:53:44.399113+00:00",
+      "role": "user",
+      "text": "Yeah that is okay.",
+      "source": "browser_customer",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:53:45.267423+00:00",
+      "role": "assistant",
+      "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+      "source": "browser_deepgram",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:55:36.901716+00:00",
+      "role": "assistant",
+      "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+      "source": "browser_opening",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:55:37.518513+00:00",
+      "role": "assistant",
+      "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+      "source": "browser_deepgram",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:55:37.650824+00:00",
+      "role": "user",
+      "text": "Yeah that is okay.",
+      "source": "browser_customer",
+      "event_type": "conversation_text"
+    }
+  ],
+  "live": []
+}

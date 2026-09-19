@@ -1,0 +1,27 @@
+assistant: Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?
+user: I have a couple of questions first, who are you and why are you calling?
+assistant: Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?
+assistant: Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?
+assistant: Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?
+user: ok you can record
+assistant: Thank you for that.
+assistant: You previously started an Energy comparison journey.
+assistant: I can help complete the remaining questions.
+assistant: Is that right?
+user: please proceed
+assistant: I have the following details captured: 
+
+- Postcode: 3000
+- Property type: house
+- Current provider: Origin
+- Usage pattern: standard
+- Plan preferences: green if simple
+
+Is that correct?
+user: it is correct
+assistant: Great!
+assistant: I will now submit the test Energy journey.
+assistant: Please stay on the line.
+assistant: Your Energy journey has been completed using the test information provided.
+assistant: Thank you for your time!
+assistant: If you have any further questions or need assistance, feel free to ask.

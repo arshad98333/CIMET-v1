@@ -1,0 +1,12 @@
+{
+  "from": "+919731701337",
+  "to": "+19378586417",
+  "call_sid": "CAc7b5bf7574a46200ec805a101ee615ed",
+  "lead_id": "inbound-e1182ac6",
+  "call_id": "call-99180bfcb6ec",
+  "voice_url": "https://cardboard-hesitancy-renewably.ngrok-free.dev/api/voice/inbound",
+  "media_ws": "wss://cardboard-hesitancy-renewably.ngrok-free.dev/api/voice/media",
+  "twilio_number": "+19378586417",
+  "twilio_number_display": "+1 (937) 858-6417",
+  "status": 200
+}

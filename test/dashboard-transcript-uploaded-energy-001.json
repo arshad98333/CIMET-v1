@@ -1,0 +1,90 @@
+{
+  "lead_id": "uploaded-energy-001",
+  "lines": [
+    {
+      "ts": "2026-09-19 10:04:09.461373+00:00",
+      "role": "assistant",
+      "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+      "source": "browser_opening",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 10:04:09.959498+00:00",
+      "role": "user",
+      "text": "I have a couple of questions first, who are you and why are you calling?",
+      "source": "browser_customer",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 10:04:10.099154+00:00",
+      "role": "assistant",
+      "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+      "source": "browser_deepgram",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 10:04:23.794705+00:00",
+      "role": "assistant",
+      "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+      "source": "browser_opening",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 10:04:24.501786+00:00",
+      "role": "assistant",
+      "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+      "source": "browser_deepgram",
+      "event_type": "conversation_text"
+    }
+  ],
+  "live": [
+    {
+      "id": "f240f235dece",
+      "lead_id": "uploaded-energy-001",
+      "ts": "2026-09-19T10:04:11.066105+00:00",
+      "kind": "transcript",
+      "message_id": "83a9c349b3",
+      "role": "user",
+      "text": "I have a couple of questions first, who are you and why are you calling?",
+      "done": true,
+      "call_id": "call-a6babeac2579",
+      "source": "browser_customer"
+    },
+    {
+      "id": "6d306cd2a3e5",
+      "lead_id": "uploaded-energy-001",
+      "ts": "2026-09-19T10:04:11.679448+00:00",
+      "kind": "transcript",
+      "message_id": "f393542888",
+      "role": "assistant",
+      "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+      "done": true,
+      "call_id": "call-a6babeac2579",
+      "source": "browser_opening"
+    },
+    {
+      "id": "ee9c39463288",
+      "lead_id": "uploaded-energy-001",
+      "ts": "2026-09-19T10:04:12.347321+00:00",
+      "kind": "transcript",
+      "message_id": "b1779297a0",
+      "role": "assistant",
+      "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+      "done": true,
+      "call_id": "call-a6babeac2579",
+      "source": "browser_deepgram"
+    },
+    {
+      "id": "1b28da4e97ee",
+      "lead_id": "uploaded-energy-001",
+      "ts": "2026-09-19T10:04:25.801055+00:00",
+      "kind": "transcript",
+      "message_id": "d6535ba936",
+      "role": "assistant",
+      "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+      "done": true,
+      "call_id": "call-bd82c3b8ba6a",
+      "source": "browser_opening"
+    }
+  ]
+}

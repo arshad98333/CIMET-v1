@@ -1,0 +1,462 @@
+{
+  "lead_id": "energy-lead-001",
+  "lines": [
+    {
+      "ts": "2026-09-19T08:59:14.065430+00:00",
+      "role": "assistant",
+      "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19T08:59:18.632388+00:00",
+      "role": "user",
+      "text": "Yeah that's okay.",
+      "source": "elevenlabs",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19T08:59:21.154900+00:00",
+      "role": "user",
+      "text": "No, I don't want to be recorded.",
+      "source": "elevenlabs",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19T09:00:48.292664+00:00",
+      "role": "assistant",
+      "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19T09:00:50.418358+00:00",
+      "role": "user",
+      "text": "Yeah that's okay.",
+      "source": "elevenlabs",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19T09:00:51.236440+00:00",
+      "role": "user",
+      "text": "Yeah that's okay.",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19T09:00:54.353216+00:00",
+      "role": "assistant",
+      "text": "You previously started an Energy comparison journey.",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19T09:00:56.616483+00:00",
+      "role": "user",
+      "text": "Can I just talk to a person?",
+      "source": "elevenlabs",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19T09:00:57.385738+00:00",
+      "role": "user",
+      "text": "Can I just talk to a person?",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19T09:01:01.219717+00:00",
+      "role": "assistant",
+      "text": "I'm going to connect you with a team member so you don't need to repeat what you've already told me.",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    }
+  ],
+  "live": [
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:46.743560+00:00",
+      "kind": "session_started",
+      "call_id": "call-a0811765aa39",
+      "message": "Recovery call started. The journey will resume after consent."
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:47.883161+00:00",
+      "kind": "deepgram",
+      "event_type": "Welcome",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:48.222559+00:00",
+      "kind": "deepgram",
+      "event_type": "SettingsApplied",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:48.291694+00:00",
+      "kind": "deepgram",
+      "event_type": "ConversationText",
+      "role": "assistant"
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:48.540013+00:00",
+      "kind": "transcript",
+      "call_id": "call-a0811765aa39",
+      "role": "assistant",
+      "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+      "source": "autonomous"
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:48.789850+00:00",
+      "kind": "deepgram",
+      "event_type": "History",
+      "role": "assistant"
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:49.030284+00:00",
+      "kind": "customer_thinking",
+      "turn": 0,
+      "mood": "cooperative",
+      "text": "Yeah that's okay."
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:50.663212+00:00",
+      "kind": "transcript",
+      "call_id": "call-a0811765aa39",
+      "role": "user",
+      "text": "Yeah that's okay.",
+      "source": "elevenlabs"
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:50.910981+00:00",
+      "kind": "customer_injected",
+      "turn": 0,
+      "via": "inject",
+      "has_pcm": false,
+      "has_mp3": false
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:51.191287+00:00",
+      "kind": "deepgram",
+      "event_type": "UserStartedSpeaking",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:51.232991+00:00",
+      "kind": "deepgram",
+      "event_type": "AgentAudioDone",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:51.235428+00:00",
+      "kind": "deepgram",
+      "event_type": "ConversationText",
+      "role": "user"
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:51.479542+00:00",
+      "kind": "transcript",
+      "call_id": "call-a0811765aa39",
+      "role": "user",
+      "text": "Yeah that's okay.",
+      "source": "autonomous"
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:51.728623+00:00",
+      "kind": "deepgram",
+      "event_type": "History",
+      "role": "user"
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:51.731711+00:00",
+      "kind": "deepgram",
+      "event_type": "EndOfTurn",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:51.758203+00:00",
+      "kind": "deepgram",
+      "event_type": "LatencyReport",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:51.759792+00:00",
+      "kind": "deepgram",
+      "event_type": "LatencyReport",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:51.761393+00:00",
+      "kind": "deepgram",
+      "event_type": "FunctionCallRequest",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:53.844572+00:00",
+      "kind": "deepgram",
+      "event_type": "FunctionCallResponse",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:53.847799+00:00",
+      "kind": "deepgram",
+      "event_type": "History",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:53.849966+00:00",
+      "kind": "deepgram",
+      "event_type": "PromptUpdated",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:54.293260+00:00",
+      "kind": "deepgram",
+      "event_type": "LatencyReport",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:54.296554+00:00",
+      "kind": "deepgram",
+      "event_type": "LatencyReport",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:54.352497+00:00",
+      "kind": "deepgram",
+      "event_type": "ConversationText",
+      "role": "assistant"
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:54.595995+00:00",
+      "kind": "transcript",
+      "call_id": "call-a0811765aa39",
+      "role": "assistant",
+      "text": "You previously started an Energy comparison journey.",
+      "source": "autonomous"
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:54.840427+00:00",
+      "kind": "deepgram",
+      "event_type": "History",
+      "role": "assistant"
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:54.841761+00:00",
+      "kind": "deepgram",
+      "event_type": "LatencyReport",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:54.843295+00:00",
+      "kind": "deepgram",
+      "event_type": "LatencyReport",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:55.089922+00:00",
+      "kind": "customer_thinking",
+      "turn": 1,
+      "mood": "curious",
+      "text": "Can I just talk to a person?"
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:56.860505+00:00",
+      "kind": "transcript",
+      "call_id": "call-a0811765aa39",
+      "role": "user",
+      "text": "Can I just talk to a person?",
+      "source": "elevenlabs"
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:57.113470+00:00",
+      "kind": "customer_injected",
+      "turn": 1,
+      "via": "inject",
+      "has_pcm": false,
+      "has_mp3": false
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:57.381897+00:00",
+      "kind": "deepgram",
+      "event_type": "UserStartedSpeaking",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:57.383442+00:00",
+      "kind": "deepgram",
+      "event_type": "AgentAudioDone",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:57.384911+00:00",
+      "kind": "deepgram",
+      "event_type": "ConversationText",
+      "role": "user"
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:57.627308+00:00",
+      "kind": "transcript",
+      "call_id": "call-a0811765aa39",
+      "role": "user",
+      "text": "Can I just talk to a person?",
+      "source": "autonomous"
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:57.871827+00:00",
+      "kind": "deepgram",
+      "event_type": "History",
+      "role": "user"
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:57.873136+00:00",
+      "kind": "deepgram",
+      "event_type": "EndOfTurn",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:57.984104+00:00",
+      "kind": "deepgram",
+      "event_type": "LatencyReport",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:57.985399+00:00",
+      "kind": "deepgram",
+      "event_type": "LatencyReport",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:00:57.986735+00:00",
+      "kind": "deepgram",
+      "event_type": "FunctionCallRequest",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:01:00.644542+00:00",
+      "kind": "deepgram",
+      "event_type": "PromptUpdated",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:01:00.646535+00:00",
+      "kind": "deepgram",
+      "event_type": "FunctionCallResponse",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:01:00.648335+00:00",
+      "kind": "deepgram",
+      "event_type": "History",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:01:01.148313+00:00",
+      "kind": "deepgram",
+      "event_type": "LatencyReport",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:01:01.151808+00:00",
+      "kind": "deepgram",
+      "event_type": "LatencyReport",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:01:01.218821+00:00",
+      "kind": "deepgram",
+      "event_type": "ConversationText",
+      "role": "assistant"
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:01:01.467340+00:00",
+      "kind": "transcript",
+      "call_id": "call-a0811765aa39",
+      "role": "assistant",
+      "text": "I'm going to connect you with a team member so you don't need to repeat what you've already told me.",
+      "source": "autonomous"
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:01:01.950739+00:00",
+      "kind": "deepgram",
+      "event_type": "History",
+      "role": "assistant"
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:01:01.952195+00:00",
+      "kind": "deepgram",
+      "event_type": "LatencyReport",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:01:01.954319+00:00",
+      "kind": "deepgram",
+      "event_type": "LatencyReport",
+      "role": null
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:01:02.195411+00:00",
+      "kind": "stopped",
+      "reason": "handoff_required",
+      "turn": 2
+    },
+    {
+      "lead_id": "energy-lead-001",
+      "ts": "2026-09-19T09:01:14.660590+00:00",
+      "kind": "session_finished",
+      "call_id": "call-a0811765aa39",
+      "ok": true,
+      "turns": 2
+    }
+  ]
+}

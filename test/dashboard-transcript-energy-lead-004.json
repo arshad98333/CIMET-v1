@@ -1,0 +1,15 @@
+{
+  "lead_id": "energy-lead-004",
+  "lines": [],
+  "live": [
+    {
+      "id": "b18e162d7082",
+      "lead_id": "energy-lead-004",
+      "ts": "2026-09-19T09:19:52.143366+00:00",
+      "kind": "ops",
+      "level": "error",
+      "text": "DNC unknown. Resolve DNC before dialling.",
+      "state": "dnc_unknown"
+    }
+  ]
+}

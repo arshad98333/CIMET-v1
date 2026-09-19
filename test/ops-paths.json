@@ -1,0 +1,7 @@
+{
+  "inbound_voice_url": "https://cardboard-hesitancy-renewably.ngrok-free.dev/api/voice/inbound",
+  "media_ws_url": "wss://cardboard-hesitancy-renewably.ngrok-free.dev/api/voice/media",
+  "live_ws_url": "/api/live/{lead_id}",
+  "twilio_number": "+19378586417",
+  "tinyfish_mcp": "https://agent.tinyfish.ai/mcp"
+}

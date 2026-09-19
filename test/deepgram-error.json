@@ -1,0 +1,5 @@
+{
+  "type": "Error",
+  "description": "Text message received from client did not match any of the formats we expect.",
+  "code": "UNPARSABLE_CLIENT_MESSAGE"
+}

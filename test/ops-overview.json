@@ -1,0 +1,10 @@
+{
+  "recovered": 0,
+  "dropped": 3,
+  "handoffs": 1,
+  "declined": 1,
+  "drafts_pending": 1,
+  "consent_granted": 2,
+  "inbound_ready": true,
+  "lab_ready": true
+}

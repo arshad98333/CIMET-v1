@@ -1,0 +1,235 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+data/
+.pytest_cache/
+node_modules/
+dist/
+
+# ==========================================
+# Environment & Secrets
+# ==========================================
+
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Keep the example environment file
+!.env.example
+
+
+# ==========================================
+# Python
+# ==========================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+*.so
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+.venv/
+venv/
+env/
+ENV/
+
+*.egg-info/
+dist/
+build/
+
+.pyre/
+.pytype/
+
+
+# ==========================================
+# Node.js / Frontend
+# ==========================================
+
+node_modules/
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+.npm/
+.yarn/
+.pnpm-store/
+
+# Frontend builds
+dist/
+build/
+.next/
+out/
+.nuxt/
+.svelte-kit/
+
+# Vite
+.vite/
+
+
+# ==========================================
+# Testing
+# ==========================================
+
+.pytest_cache/
+.tox/
+.nox/
+
+coverage/
+*.coverage
+
+# Test output
+test-results/
+playwright-report/
+blob-report/
+
+# Temporary test artifacts
+*.tmp
+*.temp
+
+
+# ==========================================
+# Logs
+# ==========================================
+
+*.log
+
+logs/
+*.log.*
+
+
+# ==========================================
+# Generated / Runtime Data
+# ==========================================
+
+*.pid
+*.pid.lock
+
+tmp/
+temp/
+.cache/
+
+# Runtime/generated JSON
+*.generated.json
+
+
+# ==========================================
+# Project-specific Generated Files
+# ==========================================
+
+# Integration test outputs
+hackathon-usecase-integration.log
+hackathon-usecase-results.json
+
+# If these are generated during tests
+testing transcripts/*.json
+testing transcripts/*.log
+
+# Local test artifacts
+test/output/
+test/results/
+
+
+# ==========================================
+# Database / Local Storage
+# ==========================================
+
+*.db
+*.sqlite
+*.sqlite3
+
+# Local vector databases / indexes
+*.faiss
+*.index
+
+# Chroma
+chroma/
+.chroma/
+
+# Local MongoDB data
+mongodb-data/
+
+
+# ==========================================
+# Docker
+# ==========================================
+
+docker-compose.override.yml
+
+
+# ==========================================
+# Azure / Cloud Local Files
+# ==========================================
+
+.azure/
+.azure-cli/
+*.pem
+*.key
+*.crt
+
+
+# ==========================================
+# IDE / Editor
+# ==========================================
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+.idea/
+*.iml
+
+*.swp
+*.swo
+*~
+
+# VS Code workspace
+*.code-workspace
+
+
+# ==========================================
+# OS Files
+# ==========================================
+
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+
+# ==========================================
+# Backup Files
+# ==========================================
+
+*.bak
+*.backup
+*.old
+*.orig
+
+
+# ==========================================
+# Secrets / Credentials
+# ==========================================
+
+*.secret
+*.credentials
+credentials.json
+service-account.json
+service-account-key.json
+
+# Private SSH keys
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub

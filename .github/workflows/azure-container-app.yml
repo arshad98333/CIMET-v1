@@ -1,0 +1,59 @@
+name: Deploy CIMEnergy
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "backend/**"
+      - "frontend/**"
+      - "requirements.txt"
+      - "Dockerfile"
+      - "infra/**"
+      - ".github/workflows/azure-container-app.yml"
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+env:
+  RESOURCE_GROUP: rg-cimenergy-hackathon
+  APP_NAME: cimenergy
+  ACR_NAME: ${{ vars.ACR_NAME }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Azure login
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Build and push image
+        run: |
+          az acr build \
+            --registry "$ACR_NAME" \
+            --image "$APP_NAME:${{ github.sha }}" \
+            --no-logs \
+            .
+
+      - name: Update Container App
+        run: |
+          LOGIN_SERVER=$(az acr show --name "$ACR_NAME" --query loginServer -o tsv)
+          az containerapp update \
+            --name "$APP_NAME" \
+            --resource-group "$RESOURCE_GROUP" \
+            --image "$LOGIN_SERVER/$APP_NAME:${{ github.sha }}"
+
+      - name: Health check
+        run: |
+          FQDN=$(az containerapp show --name "$APP_NAME" --resource-group "$RESOURCE_GROUP" --query properties.configuration.ingress.fqdn -o tsv)
+          curl --fail "https://$FQDN/api/healthz"

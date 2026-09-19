@@ -1,0 +1,22 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.git/
+.github/
+.azure/
+data/
+docs/
+infra/
+scripts/
+test/
+testing transcripts/
+*.log
+*-results.json
+*.docx
+*.pdf
+node_modules/
+dist/
+README.md
+AZURE_RUNBOOK.md

@@ -1,0 +1,5 @@
+{
+  "pcm": false,
+  "error_type": "HTTPStatusError",
+  "error": "Client error '402 Payment Required' for url 'https://api.elevenlabs.io/v1/text-to-speech/21m00Tcm4TlvDq8ikWAM?output_format=mp3_44100_128'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402"
+}

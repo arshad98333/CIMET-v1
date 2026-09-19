@@ -1,0 +1,146 @@
+{
+  "lead_id": "energy-lead-002",
+  "lines": [
+    {
+      "ts": "2026-09-19 09:20:10.110405+00:00",
+      "role": "assistant",
+      "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:20:12.050196+00:00",
+      "role": "user",
+      "text": "Yeah that's okay.",
+      "source": "elevenlabs",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:20:12.839761+00:00",
+      "role": "user",
+      "text": "Yeah that's okay.",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:20:15.895080+00:00",
+      "role": "assistant",
+      "text": "You previously started an Energy comparison journey.",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:20:17.372163+00:00",
+      "role": "user",
+      "text": "Which plan would save me the most money though?",
+      "source": "elevenlabs",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:20:18.269119+00:00",
+      "role": "user",
+      "text": "Which plan would save me the most money though?",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:20:18.978618+00:00",
+      "role": "assistant",
+      "text": "I can collect the information needed to complete the comparison journey, but I can't recommend a provider or plan.",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:20:20.540025+00:00",
+      "role": "user",
+      "text": "Not sure, whatever came with the place.",
+      "source": "elevenlabs",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:20:22.264363+00:00",
+      "role": "user",
+      "text": "Not sure, whatever came with the place.",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:20:24.584983+00:00",
+      "role": "assistant",
+      "text": "Who is your current energy provider?",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:20:25.962144+00:00",
+      "role": "user",
+      "text": "AGL.",
+      "source": "elevenlabs",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:20:26.713779+00:00",
+      "role": "user",
+      "text": "AGL.",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:20:30.414745+00:00",
+      "role": "assistant",
+      "text": "Thank you.",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:20:31.638927+00:00",
+      "role": "assistant",
+      "text": "How would you describe your usual energy usage: low, standard, or high?",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:20:31.867878+00:00",
+      "role": "user",
+      "text": "I don't really follow. Can you say that again?",
+      "source": "elevenlabs",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:20:32.662561+00:00",
+      "role": "user",
+      "text": "I don't really follow. Can you say that again?",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:20:33.140740+00:00",
+      "role": "assistant",
+      "text": "How would you describe your usual energy usage?",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:20:34.908735+00:00",
+      "role": "user",
+      "text": "Pretty low, just me.",
+      "source": "elevenlabs",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:20:35.668537+00:00",
+      "role": "user",
+      "text": "Pretty low, just me.",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:20:39.404855+00:00",
+      "role": "assistant",
+      "text": "Thank you.",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    }
+  ],
+  "live": []
+}

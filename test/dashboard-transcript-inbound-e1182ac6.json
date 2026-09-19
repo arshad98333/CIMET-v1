@@ -1,0 +1,40 @@
+{
+  "lead_id": "inbound-e1182ac6",
+  "lines": [],
+  "live": [
+    {
+      "id": "517cc295aa31",
+      "lead_id": "inbound-e1182ac6",
+      "ts": "2026-09-19T09:35:39.102456+00:00",
+      "kind": "ops",
+      "level": "info",
+      "text": "Inbound call from +919731701337 to +1 (937) 858-6417. Record inbound-e1182ac6 is live.",
+      "state": "live",
+      "inbound": true
+    },
+    {
+      "id": "cb2b755cd4b7",
+      "lead_id": "inbound-e1182ac6",
+      "ts": "2026-09-19T09:35:39.103107+00:00",
+      "kind": "twilio_inbound",
+      "from": "+919731701337",
+      "to": "+19378586417",
+      "call_sid": "CAc7b5bf7574a46200ec805a101ee615ed",
+      "call_id": "call-99180bfcb6ec",
+      "voice_url": "https://cardboard-hesitancy-renewably.ngrok-free.dev/api/voice/inbound",
+      "media_ws": "wss://cardboard-hesitancy-renewably.ngrok-free.dev/api/voice/media",
+      "twilio_number": "+19378586417",
+      "twilio_number_display": "+1 (937) 858-6417",
+      "status": 200
+    },
+    {
+      "id": "990a3b5484e9",
+      "lead_id": "inbound-e1182ac6",
+      "ts": "2026-09-19T09:39:01.820683+00:00",
+      "kind": "ops",
+      "level": "info",
+      "text": "Recovery call started. The journey will resume after consent.",
+      "state": "consent_required"
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "lead_id": "inbound-0fba3941",
+  "lines": [
+    {
+      "ts": "2026-09-19 09:29:40.409298+00:00",
+      "role": "assistant",
+      "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:29:40.592877+00:00",
+      "role": "assistant",
+      "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+      "source": "autonomous",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:29:42.882283+00:00",
+      "role": "user",
+      "text": "Yeah that's okay.",
+      "source": "elevenlabs",
+      "event_type": "conversation_text"
+    },
+    {
+      "ts": "2026-09-19 09:29:42.887608+00:00",
+      "role": "user",
+      "text": "Yeah that's okay.",
+      "source": "elevenlabs",
+      "event_type": "conversation_text"
+    }
+  ],
+  "live": [
+    {
+      "id": "dd60771bf238",
+      "lead_id": "inbound-0fba3941",
+      "ts": "2026-09-19T09:29:37.040472+00:00",
+      "kind": "ops",
+      "level": "error",
+      "text": "HTTP 400 error: Unable to create record: The number +15551234567 is unverified. Trial accounts may only make calls to verified numbers.",
+      "state": "consent_required"
+    },
+    {
+      "id": "88b46c917cab",
+      "lead_id": "inbound-0fba3941",
+      "ts": "2026-09-19T09:29:37.847459+00:00",
+      "kind": "ops",
+      "level": "error",
+      "text": "HTTP 400 error: Unable to create record: The number +15551234567 is unverified. Trial accounts may only make calls to verified numbers.",
+      "state": "consent_required"
+    },
+    {
+      "id": "f2966ac23fe6",
+      "lead_id": "inbound-0fba3941",
+      "ts": "2026-09-19T09:29:38.489088+00:00",
+      "kind": "session_started",
+      "call_id": "call-2d5b6628c278",
+      "message": "Recovery call started. The journey will resume after consent."
+    },
+    {
+      "id": "25968cc11eb5",
+      "lead_id": "inbound-0fba3941",
+      "ts": "2026-09-19T09:29:39.101514+00:00",
+      "kind": "session_started",
+      "call_id": "call-de867def7733",
+      "message": "Recovery call started. The journey will resume after consent."
+    },
+    {
+      "id": "69997bfedc8e",
+      "lead_id": "inbound-0fba3941",
+      "ts": "2026-09-19T09:29:40.020717+00:00",
+      "kind": "deepgram",
+      "event_type": "Welcome",
+      "role": null
+    },
+    {
+      "id": "d861ce84fb9a",
+      "lead_id": "inbound-0fba3941",
+      "ts": "2026-09-19T09:29:40.257731+00:00",
+      "kind": "deepgram",
+      "event_type": "Welcome",
+      "role": null
+    },
+    {
+      "id": "84871d160b49",
+      "lead_id": "inbound-0fba3941",
+      "ts": "2026-09-19T09:29:40.328467+00:00",
+      "kind": "deepgram",
+      "event_type": "SettingsApplied",
+      "role": null
+    },
+    {
+      "id": "c61172a57b18",
+      "lead_id": "inbound-0fba3941",
+      "ts": "2026-09-19T09:29:40.407870+00:00",
+      "kind": "deepgram",
+      "event_type": "ConversationText",
+      "role": "assistant"
+    },
+    {
+      "id": "dab8025b4c18",
+      "lead_id": "inbound-0fba3941",
+      "ts": "2026-09-19T09:29:40.548937+00:00",
+      "kind": "deepgram",
+      "event_type": "SettingsApplied",
+      "role": null
+    },
+    {
+      "id": "33dde2f47a9b",
+      "lead_id": "inbound-0fba3941",
+      "ts": "2026-09-19T09:29:40.591399+00:00",
+      "kind": "deepgram",
+      "event_type": "ConversationText",
+      "role": "assistant"
+    },
+    {
+      "id": "b09e1943485c",
+      "lead_id": "inbound-0fba3941",
+      "ts": "2026-09-19T09:29:40.909982+00:00",
+      "kind": "deepgram",
+      "event_type": "History",
+      "role": "assistant"
+    },
+    {
+      "id": "7cdfba377f6f",
+      "lead_id": "inbound-0fba3941",
+      "ts": "2026-09-19T09:29:41.086378+00:00",
+      "kind": "deepgram",
+      "event_type": "History",
+      "role": "assistant"
+    },
+    {
+      "id": "8a2be1b7f12f",
+      "lead_id": "inbound-0fba3941",
+      "ts": "2026-09-19T09:29:41.152864+00:00",
+      "kind": "customer_thinking",
+      "turn": 0,
+      "mood": "cooperative",
+      "text": "Yeah that's okay."
+    },
+    {
+      "id": "f4977e235ec3",
+      "lead_id": "inbound-0fba3941",
+      "ts": "2026-09-19T09:29:41.896368+00:00",
+      "kind": "customer_thinking",
+      "turn": 0,
+      "mood": "cooperative",
+      "text": "Yeah that's okay."
+    },
+    {
+      "id": "fe81e1e0a5d0",
+      "lead_id": "inbound-0fba3941",
+      "ts": "2026-09-19T09:29:43.323332+00:00",
+      "kind": "transcript",
+      "message_id": "78daf73ea6",
+      "role": "user",
+      "text": "Yeah that's okay.",
+      "done": true,
+      "call_id": "call-2d5b6628c278",
+      "source": "elevenlabs"
+    },
+    {
+      "id": "c405003d4d7e",
+      "lead_id": "inbound-0fba3941",
+      "ts": "2026-09-19T09:29:43.323899+00:00",
+      "kind": "transcript",
+      "message_id": "e043192cc0",
+      "role": "user",
+      "text": "Yeah that's okay.",
+      "done": true,
+      "call_id": "call-de867def7733",
+      "source": "elevenlabs"
+    },
+    {
+      "id": "25eaa25a4d52",
+      "lead_id": "inbound-0fba3941",
+      "ts": "2026-09-19T09:29:43.358766+00:00",
+      "kind": "customer_injected",
+      "turn": 0,
+      "via": "inject",
+      "has_mp3": false
+    },
+    {
+      "id": "86598c0d7c21",
+      "lead_id": "inbound-0fba3941",
+      "ts": "2026-09-19T09:29:43.363719+00:00",
+      "kind": "customer_injected",
+      "turn": 0,
+      "via": "inject",
+      "has_mp3": false
+    },
+    {
+      "id": "ad5a2d55fd87",
+      "lead_id": "inbound-0fba3941",
+      "ts": "2026-09-19T09:29:43.619749+00:00",
+      "kind": "deepgram",
+      "event_type": "UserStartedSpeaking",
+      "role": null
+    },
+    {
+      "id": "6ac347976fca",
+      "lead_id": "inbound-0fba3941",
+      "ts": "2026-09-19T09:29:43.625121+00:00",
+      "kind": "deepgram",
+      "event_type": "UserStartedSpeaking",
+      "role": null
+    },
+    {
+      "id": "9d8d795143c7",
+      "lead_id": "inbound-0fba3941",
+      "ts": "2026-09-19T09:29:43.667778+00:00",
+      "kind": "deepgram",
+      "event_type": "AgentAudioDone",
+      "role": null
+    },
+    {
+      "id": "b4e71f0f352f",
+      "lead_id": "inbound-0fba3941",
+      "ts": "2026-09-19T09:29:43.670941+00:00",
+      "kind": "deepgram",
+      "event_type": "ConversationText",
+      "role": "user"
+    },
+    {
+      "id": "4495d03c0dbb",
+      "lead_id": "inbound-0fba3941",
+      "ts": "2026-09-19T09:29:43.681026+00:00",
+      "kind": "deepgram",
+      "event_type": "AgentAudioDone",
+      "role": null
+    },
+    {
+      "id": "8a4864f57ea1",
+      "lead_id": "inbound-0fba3941",
+      "ts": "2026-09-19T09:29:43.683382+00:00",
+      "kind": "deepgram",
+      "event_type": "ConversationText",
+      "role": "user"
+    }
+  ]
+}

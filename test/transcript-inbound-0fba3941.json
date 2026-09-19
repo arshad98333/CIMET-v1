@@ -1,0 +1,127 @@
+[
+  {
+    "role": "assistant",
+    "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+    "source": "autonomous"
+  },
+  {
+    "role": "assistant",
+    "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+    "source": "autonomous"
+  },
+  {
+    "role": "user",
+    "text": "Yeah that's okay.",
+    "source": "elevenlabs"
+  },
+  {
+    "role": "user",
+    "text": "Yeah that's okay.",
+    "source": "elevenlabs"
+  },
+  {
+    "role": "user",
+    "text": "Yeah that's okay.",
+    "source": "autonomous"
+  },
+  {
+    "role": "user",
+    "text": "Yeah that's okay.",
+    "source": "autonomous"
+  },
+  {
+    "role": "assistant",
+    "text": "You previously started an Energy comparison journey.",
+    "source": "autonomous"
+  },
+  {
+    "role": "user",
+    "text": "Can I just talk to a person?",
+    "source": "elevenlabs"
+  },
+  {
+    "role": "user",
+    "text": "Can I just talk to a person?",
+    "source": "autonomous"
+  },
+  {
+    "role": "assistant",
+    "text": "I'm going to connect you with a team member so you don't need to repeat what you've already told me.",
+    "source": "autonomous"
+  },
+  {
+    "role": "assistant",
+    "text": "I am unable to proceed with this call.",
+    "source": "autonomous"
+  },
+  {
+    "role": "assistant",
+    "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+    "source": "autonomous"
+  },
+  {
+    "role": "user",
+    "text": "Yeah that's okay.",
+    "source": "elevenlabs"
+  },
+  {
+    "role": "user",
+    "text": "Yeah that's okay.",
+    "source": "autonomous"
+  },
+  {
+    "role": "assistant",
+    "text": "You previously started an Energy comparison journey.",
+    "source": "autonomous"
+  },
+  {
+    "role": "user",
+    "text": "Can I just talk to a person?",
+    "source": "elevenlabs"
+  },
+  {
+    "role": "user",
+    "text": "Can I just talk to a person?",
+    "source": "autonomous"
+  },
+  {
+    "role": "assistant",
+    "text": "I'm going to connect you with a team member so you don't need to repeat what you've already told me.",
+    "source": "autonomous"
+  },
+  {
+    "role": "assistant",
+    "text": "Hi, this is the Energy recovery team calling about a comparison journey you started. This call may be recorded for quality and training. Is that okay with you?",
+    "source": "autonomous"
+  },
+  {
+    "role": "user",
+    "text": "Yeah that's okay.",
+    "source": "elevenlabs"
+  },
+  {
+    "role": "user",
+    "text": "Yeah that's okay.",
+    "source": "autonomous"
+  },
+  {
+    "role": "assistant",
+    "text": "You previously started an Energy comparison journey.",
+    "source": "autonomous"
+  },
+  {
+    "role": "user",
+    "text": "Can I just talk to a person?",
+    "source": "elevenlabs"
+  },
+  {
+    "role": "user",
+    "text": "Can I just talk to a person?",
+    "source": "autonomous"
+  },
+  {
+    "role": "assistant",
+    "text": "I'm going to connect you with a team member so you don't need to repeat what you've already told me.",
+    "source": "autonomous"
+  }
+]

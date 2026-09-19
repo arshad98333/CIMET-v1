@@ -1,0 +1,11 @@
+{
+  "lead_004": {
+    "ok": false,
+    "error": "DNC unknown. Resolve DNC before dialling."
+  },
+  "lead_002": {
+    "ok": true,
+    "error": "HTTP 400 error: Unable to create record: The number +61400000102 is unverified. Trial accounts may only make calls to verified numbers.",
+    "note": "Desk still starts the local voice agent after the phone dial fails."
+  }
+}
