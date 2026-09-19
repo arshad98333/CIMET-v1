@@ -128,12 +128,12 @@ def deepgram_agent_settings(lead: Lead) -> dict[str, Any]:
     return _deepgram_settings(
         lead,
         input_encoding="linear16",
-        input_rate=24000,
+        input_rate=48000,
         output_encoding="linear16",
         output_rate=24000,
-        speak_model=os.getenv("DEEPGRAM_SPEAK_MODEL", "aura-2-asteria-en"),
-        listen_version=None,
-        speak_version=None,
+        speak_model=os.getenv("DEEPGRAM_SPEAK_MODEL", "aura-2-hyperion-en"),
+        listen_version="v2",
+        speak_version="v1",
         tags=["cimenergy", "hackathon", "recovery"],
     )
 
@@ -145,9 +145,9 @@ def deepgram_twilio_agent_settings(lead: Lead) -> dict[str, Any]:
         input_rate=8000,
         output_encoding="mulaw",
         output_rate=8000,
-        speak_model=os.getenv("DEEPGRAM_TELEPHONY_SPEAK_MODEL", "flux-alexis-en"),
+        speak_model=os.getenv("DEEPGRAM_TELEPHONY_SPEAK_MODEL", "aura-2-hyperion-en"),
         listen_version="v2",
-        speak_version="v2",
+        speak_version="v1",
         tags=["cimenergy", "voice-recovery"],
     )
 
@@ -189,8 +189,8 @@ def _deepgram_settings(
             "speak": {"provider": speak_provider},
             "think": {
                 "provider": {
-                    "type": os.getenv("DEEPGRAM_AGENT_LLM_PROVIDER", "open_ai"),
-                    "model": os.getenv("DEEPGRAM_AGENT_LLM_MODEL", "gpt-4o-mini"),
+                    "type": os.getenv("DEEPGRAM_AGENT_LLM_PROVIDER", "google"),
+                    "model": os.getenv("DEEPGRAM_AGENT_LLM_MODEL", "gemini-3.1-flash-lite"),
                     "temperature": 0.1,
                 },
                 "prompt": build_voice_prompt(lead),
