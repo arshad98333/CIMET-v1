@@ -38,6 +38,12 @@ EventType = Literal[
     "customer_declined",
     "confused",
     "angry",
+    "busy",
+    "handoff_requested",
+    "human_takeover",
+    "human_message",
+    "human_resume",
+    "call_ended",
 ]
 HumanControlState = Literal["ai_active", "handoff_requested", "human_active", "ended"]
 
@@ -62,14 +68,15 @@ class Lead(BaseModel):
     consent_status: ConsentStatus = "not_requested"
     outcome: str | None = None
     active_call_id: str | None = None
+    twilio_call_sid: str | None = None
     call_state: CallState = "not_started"
     harness_state: str = "ready"
-    clarification_attempts: int = 0
-    submission_result: dict[str, Any] | None = None
     human_control: HumanControlState = "ai_active"
-    twilio_call_sid: str | None = None
+    clarification_attempts: int = 0
+    misunderstanding_count: int = 0
     last_customer_utterance: str | None = None
     operator_note: str | None = None
+    submission_result: dict[str, Any] | None = None
 
 
 class CallEvent(BaseModel):
@@ -93,7 +100,7 @@ class Handoff(BaseModel):
     missing_fields: list[str]
     reason: str
     customer_context: str | None = None
-    control_status: Literal["pending", "connected"] = "pending"
+    control_status: Literal["pending", "connected", "closed"] = "pending"
     created_at: datetime = Field(default_factory=utc_now)
 
 
@@ -160,7 +167,8 @@ class HandoffRequest(BaseModel):
 
 
 class HumanControlRequest(BaseModel):
-    action: Literal["takeover", "end"]
+    action: Literal["takeover", "message", "resume", "end"]
+    message: str = ""
     note: str = ""
 
 
