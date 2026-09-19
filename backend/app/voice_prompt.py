@@ -10,6 +10,9 @@ from .scripts import (
     PAYMENT_SCRIPT,
 )
 from .seed_data import ENERGY_FIELD_ORDER
+# Importing the control plane binds the existing handoff boundary to the
+# backend-owned human-control state machine during application startup.
+from . import human_control as _human_control  # noqa: F401
 
 
 EMPATHY_AND_HUMAN_CONTROL_POLICY = """
