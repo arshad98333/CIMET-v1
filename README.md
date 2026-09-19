@@ -221,3 +221,54 @@ testing transcripts/      Workflow test evidence
 CIMEnergy combines **voice automation, durable workflows, deterministic guardrails, human approval, and Azure enterprise deployment** to turn abandoned Energy journeys into controlled recovery opportunities.
 
 > Prototype uses synthetic/test data and test numbers. It does not collect payment credentials or provide product/financial advice.
+
+## 18. Input → Processing → Output
+### Successful Recovery
+**Input:** `energy-lead-001`, synthetic lead, DNC=`clear`.
+**Input:** Existing postcode=`3000`; next step=`property_type`.
+**Input:** Recording consent=`granted`.
+**Input:** Property type=`house`; provider=`synthetic-provider-a`.
+**Input:** Usage pattern=`standard`; additional details=`none`.
+**Process:** Ask one question at a time for remaining fields.
+**Process:** Validate answers as structured journey data.
+**Process:** Confirm completed fields and validate the Pydantic payload.
+**Process:** Submit only to the sandbox/mock journey.
+**Output:** `test_payload_submitted` → `journey_completed`.
+**Output:** Lead outcome=`completed`; call=`call_ended`.
+
+### Consent Decline / Opt-Out
+**Input:** `energy-lead-007`, synthetic lead, DNC=`clear`.
+**Input:** Recording consent=`declined`.
+**Process:** Stop before collecting journey information and record `consent_declined`.
+**Output:** No journey fields or payload are created.
+**Output:** Outcome=`declined`; `call_ended` is recorded.
+**Input:** Customer says “Stop calling me.”
+**Process:** Treat the request as terminal; record `customer_declined` and suppress recovery.
+**Output:** No retry or pressure loop is created.
+
+### Advice / Human Handoff
+**Input:** `energy-lead-005`, synthetic lead, DNC=`clear`, consent=`granted`.
+**Input:** Customer asks which provider or plan saves most money.
+**Process:** Trigger `advice_boundary_triggered`; provide no recommendation.
+**Output:** Offer a human handoff with safe journey context.
+**Input:** Customer asks where to provide a card number.
+**Process:** Trigger `payment_boundary_triggered` and stop voice collection.
+**Process:** Never request, repeat, store, or submit payment values.
+**Output:** Handoff is created without payment data.
+**Output:** Automated state=`handoff_required` or `handed_off`.
+
+### Executive I/O Contract
+**Input:** Dropped Energy journey, customer voice, and current state.
+**Process:** DNC → consent → bounded recovery → validation → approval.
+**Process:** FastAPI owns protected decisions and tool execution.
+**Process:** Voice AI handles conversation; protected state remains backend-controlled.
+**Process:** Temporal maintains durable workflow state across interruption.
+**Process:** MongoDB records safe leads, events, transcripts, audio, and reports.
+**Process:** Azure Key Vault provides protected production secrets.
+**Output:** Completed journey, declined journey, or human handoff.
+**Output:** Auditable state transitions and operator-visible evidence.
+**Output:** KPI/reporting data for operational review.
+**Business value:** Automate repetitive recovery while controlling escalation and risk.
+**Operational input:** Current lead status and remaining journey step.
+**Operational output:** Updated lead, call events, and approval state.
+**Control output:** Protected exceptions are escalated instead of forced through automation.
