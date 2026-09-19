@@ -13,6 +13,8 @@ param(
 
 $ErrorActionPreference = "Stop"
 Set-StrictMode -Version Latest
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+$env:PYTHONIOENCODING = "utf-8"
 
 function Require-Command($Name) {
     if (-not (Get-Command $Name -ErrorAction SilentlyContinue)) {
@@ -181,7 +183,7 @@ if (-not $containerEnv) {
 }
 
 $image = "$($acr.loginServer)/$AppName`:$ImageTag"
-az acr build --registry $AcrName --image "$AppName`:$ImageTag" $root --only-show-errors | Out-Null
+az acr build --registry $AcrName --image "$AppName`:$ImageTag" $root --no-logs --only-show-errors | Out-Null
 
 $params = @{
     location = @{ value = $Location }

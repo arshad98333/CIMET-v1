@@ -42,6 +42,7 @@ jobs:
           az acr build \
             --registry "$ACR_NAME" \
             --image "$APP_NAME:${{ github.sha }}" \
+            --no-logs \
             .
 
       - name: Update Container App
