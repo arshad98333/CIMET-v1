@@ -39,6 +39,7 @@ EventType = Literal[
     "confused",
     "angry",
 ]
+HumanControlState = Literal["ai_active", "handoff_requested", "human_active", "ended"]
 
 
 def utc_now() -> datetime:
@@ -65,6 +66,10 @@ class Lead(BaseModel):
     harness_state: str = "ready"
     clarification_attempts: int = 0
     submission_result: dict[str, Any] | None = None
+    human_control: HumanControlState = "ai_active"
+    twilio_call_sid: str | None = None
+    last_customer_utterance: str | None = None
+    operator_note: str | None = None
 
 
 class CallEvent(BaseModel):
@@ -87,6 +92,8 @@ class Handoff(BaseModel):
     completed_fields: dict[str, str]
     missing_fields: list[str]
     reason: str
+    customer_context: str | None = None
+    control_status: Literal["pending", "connected"] = "pending"
     created_at: datetime = Field(default_factory=utc_now)
 
 
@@ -150,6 +157,11 @@ class LeadDetail(BaseModel):
 
 class HandoffRequest(BaseModel):
     reason: str
+
+
+class HumanControlRequest(BaseModel):
+    action: Literal["takeover", "end"]
+    note: str = ""
 
 
 class SubmissionResponse(BaseModel):
