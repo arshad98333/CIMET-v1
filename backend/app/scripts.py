@@ -13,14 +13,21 @@ NO_ADVICE_SCRIPT = (
     "a provider or plan. I can connect you with a team member if you would like advice."
 )
 PAYMENT_SCRIPT = (
-    "Please don't share card or payment details over this call. I'll connect you with a team member "
-    "through the approved secure process."
+    "I understand. For your security, please don't share card or payment details over this call. "
+    "I'll connect you with a team member through the approved secure process."
 )
-DECLINE_SCRIPT = "Understood. I won't continue. Thank you for your time."
+DECLINE_SCRIPT = "Of course. I understand. I won't continue. Thank you for your time."
 HANDOFF_SCRIPT = (
-    "I'm going to connect you with a team member so you don't need to repeat what you've already told me. "
-    "I'll pass on the progress and the reason for the transfer."
+    "I hear you. I'm going to connect you with a team member so you don't need to repeat what you've already told me. "
+    "I'll pass on the progress and why the handoff is happening."
 )
+EMPATHY_SCRIPTS = {
+    "frustrated": "I hear that this has been frustrating. I'll keep this simple.",
+    "worried": "I understand this is important. I'll keep the next step clear.",
+    "confused": "No problem. I'll slow down and take this one step at a time.",
+    "repeated": "I understand you don't want to repeat yourself. I'll pass the context to a team member.",
+    "urgent": "I hear that this is time-sensitive. I'll keep this brief and get you to the right team.",
+}
 SILENCE_SCRIPT = "Are you still there?"
 COMPLETION_SCRIPT = (
     "Your Energy journey has been completed using the test information provided. Thank you for your time."
