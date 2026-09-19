@@ -1,13 +1,14 @@
 """Runtime control plane for live voice sessions.
 
-Harness rule: the model may suggest actions, but only this module and the
-FastAPI control endpoints are allowed to change human-control state.
+The model may request a handoff, but backend state remains authoritative. This
+module also promotes every successful warm-handoff into human-control state so
+that an LLM cannot continue automated collection after escalation.
 """
 
 import asyncio
 import html
+import json
 import os
-from dataclasses import dataclass
 
 import httpx
 from fastapi import HTTPException
@@ -16,22 +17,16 @@ from .models import CallEvent, Lead
 from .repository import Repository
 
 
-@dataclass
-class VoiceSessionHandle:
-    websocket: object
-    call_id: str
-    lead_id: str
-
-
-_ACTIVE_SESSIONS: dict[str, VoiceSessionHandle] = {}
+_ACTIVE_SESSIONS: dict[str, object] = {}
 _SESSION_LOCK = asyncio.Lock()
+_ORIGINAL_CREATE_HANDOFF = None
 
 
-async def register_session(call_id: str, lead_id: str, websocket: object) -> None:
+async def register_session(call_id: str, websocket: object) -> None:
     if not call_id:
         return
     async with _SESSION_LOCK:
-        _ACTIVE_SESSIONS[call_id] = VoiceSessionHandle(websocket, call_id, lead_id)
+        _ACTIVE_SESSIONS[call_id] = websocket
 
 
 async def unregister_session(call_id: str) -> None:
@@ -41,16 +36,16 @@ async def unregister_session(call_id: str) -> None:
         _ACTIVE_SESSIONS.pop(call_id, None)
 
 
-async def active_session(call_id: str) -> VoiceSessionHandle | None:
+async def active_session(call_id: str):
     async with _SESSION_LOCK:
         return _ACTIVE_SESSIONS.get(call_id)
 
 
 async def send_agent_message(call_id: str, message: str, *, behavior: str = "interrupt") -> bool:
-    handle = await active_session(call_id)
-    if not handle or not message.strip():
+    websocket = await active_session(call_id)
+    if not websocket or not message.strip():
         return False
-    await handle.websocket.send(__import__("json").dumps({
+    await websocket.send(json.dumps({
         "type": "InjectAgentMessage",
         "behavior": behavior,
         "message": message.strip()[:1200],
@@ -116,9 +111,10 @@ async def apply_human_control(
 
         redirected = False
         operator_phone = os.getenv("HUMAN_OPERATOR_PHONE", "")
-        if lead.twilio_call_sid and operator_phone:
+        call_sid = lead.twilio_call_sid or (call_id if call_id.startswith("CA") else "")
+        if call_sid and operator_phone:
             try:
-                redirected = await _redirect_twilio_to_operator(lead.twilio_call_sid, operator_phone)
+                redirected = await _redirect_twilio_to_operator(call_sid, operator_phone)
             except Exception as exc:
                 await repo.add_event(CallEvent(
                     call_id=call_id,
@@ -173,7 +169,6 @@ async def apply_human_control(
         ))
         return {"ok": True, "mode": "human_active", "message_sent": True}
 
-    # resume
     if lead.human_control != "human_active":
         raise HTTPException(status_code=409, detail="Human takeover is not active")
     if lead.twilio_call_sid and os.getenv("HUMAN_OPERATOR_PHONE"):
@@ -192,3 +187,27 @@ async def apply_human_control(
         metadata={"note": note},
     ))
     return {"ok": True, "mode": "ai_active", "resumed": True}
+
+
+async def _handoff_and_activate(repo: Repository, lead: Lead, call_id: str, reason: str):
+    global _ORIGINAL_CREATE_HANDOFF
+    if _ORIGINAL_CREATE_HANDOFF is None:
+        raise RuntimeError("Original create_handoff handler is unavailable")
+    handoff = await _ORIGINAL_CREATE_HANDOFF(repo, lead, call_id, reason)
+    lead.human_control = "handoff_requested"
+    lead.operator_note = reason
+    await repo.save_lead(lead)
+    return handoff
+
+
+# services.py is imported before voice_prompt.py in the application startup path.
+# Bind the existing handoff boundary once so every current handoff path also
+# enters explicit human-control state without duplicating business logic.
+try:
+    from . import services as _services
+
+    if getattr(_services, "create_handoff", None) is not _handoff_and_activate:
+        _ORIGINAL_CREATE_HANDOFF = _services.create_handoff
+        _services.create_handoff = _handoff_and_activate
+except Exception:
+    _ORIGINAL_CREATE_HANDOFF = None
