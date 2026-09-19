@@ -1,44 +1,192 @@
 # CIMEnergy Recovery
 
-CIMEnergy Recovery is a live voice system for incomplete energy comparison journeys. It combines phone calling, a voice agent, durable workflow state, secure cloud deployment, operator approval, and audit evidence.
+## Enterprise Voice AI for Recovering Dropped Energy Journeys
 
-## Business Outcome
+CIMEnergy is a voice-first recovery workflow for Energy businesses. It reconnects with incomplete customer journeys, captures only the remaining information, applies deterministic guardrails, and routes sensitive cases to human operators.
 
-1. Recover dropped customer journeys through a guided voice conversation.
-2. Capture only the fields needed to complete the energy form.
-3. Respect consent, DNC, advice, payment, and handoff controls.
-4. Resume from the last confirmed step if the call drops.
-5. Store transcript, audio, field state, and KPI evidence per lead.
+> **Business value:** recover incomplete journeys with less repetitive follow-up work while keeping consent, DNC, advice, payment, and escalation decisions controlled and auditable.
 
-## Multi Agent System
+![CIMEnergy Call Console](docs/doc3_assets/doc3-diagram-01.png)
 
-| Tool | Business role |
+## 1. C-Suite Business Case
+
+| Business challenge | CIMEnergy response |
 |---|---|
-| Twilio | Receives and routes the customer phone call |
-| Deepgram | Runs the real time voice agent |
-| FastAPI | Owns rules, tool calls, state changes, and dashboard updates |
-| Temporal | Keeps workflow state durable across call drops and retries |
-| Azure OpenAI | Supports KPI report analysis and intent decisions |
-| TinyFish | Holds or submits the approved form journey |
-| MongoDB Atlas | Stores leads, transcripts, events, audio, and reports |
-| Azure Key Vault | Stores production secrets securely |
+| Abandoned Energy journeys | Automated voice recovery |
+| Manual follow-up workload | Guided AI conversation |
+| Inconsistent handling | Deterministic backend guardrails |
+| Sensitive customer requests | Human handoff |
+| Limited operational visibility | Calls, events, transcripts and KPI evidence |
+| Cloud security requirements | Azure deployment + Key Vault secret management |
 
-## Live Call Flow
+## 2. Executive Workflow
 
-1. Customer calls the Twilio number or starts a laptop voice call.
-2. Twilio sends the inbound webhook to `/api/voice/inbound`.
-3. FastAPI starts or resumes the Temporal workflow.
-4. Twilio streams audio to `/api/voice/media`.
-5. FastAPI bridges audio to Deepgram.
-6. Deepgram speaks with the customer and calls FastAPI tools.
-7. FastAPI validates consent, DNC, fields, advice, payment, and handoff rules.
-8. MongoDB saves transcript, call events, form state, and audio.
-9. TinyFish receives the approved form payload.
-10. Azure OpenAI generates the executive KPI report.
+```text
+Dropped-off customer journey
+          ↓
+      DNC check
+          ↓ clear
+ Voice call + disclosure
+          ↓ consent
+ Recover missing fields
+          ↓
+   Guardrail decision
+   ├─ Advice → human
+   ├─ Payment → stop + human
+   ├─ Stop calling → end
+   └─ Uncertainty → handoff
+          ↓
+ Validate + approve
+          ↓
+ Submit test journey
+          ↓
+ Complete + audit outcome
+```
 
-## Required Credentials
+## 3. Step-by-Step Customer Recovery
 
-Keep local values in `.env` for development. Use Azure Key Vault in production. Do not commit `.env`.
+1. **Identify** — load a synthetic dropped-off Energy lead.
+2. **Protect** — check DNC status before dialling.
+3. **Consent** — disclose recording and obtain affirmative consent.
+4. **Recover** — ask focused questions for missing journey fields.
+5. **Validate** — confirm structured answers before submission.
+6. **Guardrail** — stop automation for advice, payment, refusal, confusion, or human-help requests.
+7. **Approve** — operator reviews the draft action.
+8. **Complete** — submit the approved test payload and log the outcome.
+
+## 4. Performance Dashboard
+
+![Performance Dashboard](docs/doc3_assets/doc3-diagram-02.png)
+
+Operations can monitor recovery activity, drafts, handoffs, declines, consent state, open work, and live-call status.
+
+## 5. Voice Operations
+
+![Voice Operations](docs/doc3_assets/doc3-diagram-03.png)
+
+The voice console centralizes the test number, selected lead, webhook, call state, and recording availability.
+
+## 6. Script & Lead Ingestion
+
+![Script and Lead Ingestion](docs/doc3_assets/doc3-diagram-04.png)
+
+Controlled synthetic leads and scripts make the recovery workflow repeatable for demos, testing, and QA.
+
+## 7. Human-in-the-Loop Approval
+
+![Human Approval Queue](docs/doc3_assets/doc3-diagram-05.png)
+
+Draft actions remain visible to an operator so a human can approve or deny the final journey action.
+
+## 8. Enterprise Architecture
+
+```mermaid
+flowchart LR
+    C[Customer] --> T[Twilio Voice]
+    T <--> A[Azure Container Apps]
+    A <--> D[Deepgram Voice Agent]
+    A <--> W[Temporal Durable Workflow]
+    A --> M[MongoDB Atlas]
+    A --> F[TinyFish]
+    A --> O[Azure OpenAI]
+    A --> K[Azure Key Vault]
+    OP[Operator] --> A
+    OP --> H[Human Approval]
+```
+
+## 9. Technology & Business Role
+
+| Technology | Role |
+|---|---|
+| Twilio | Customer voice connection and call routing |
+| Deepgram | Real-time voice interaction |
+| FastAPI | API, business rules, tools and dashboard updates |
+| Temporal | Durable workflow state and recovery |
+| MongoDB Atlas | Leads, transcripts, events, audio and reports |
+| TinyFish | Approved form journey automation |
+| Azure OpenAI | KPI/report analysis |
+| Azure Container Apps | Application hosting |
+| Azure Key Vault | Production secret storage |
+
+## 10. Azure Enterprise Deployment
+
+The application is designed for Azure enterprise deployment. The application runs in Azure Container Apps, while production credentials are kept outside the codebase and stored in **Azure Key Vault**.
+
+```text
+GitHub
+   ↓
+Container Build
+   ↓
+Azure Container Registry
+   ↓
+Azure Container Apps
+   ├── FastAPI / Dashboard
+   ├── Voice WebSocket
+   └── Managed configuration
+           ↓
+     Azure Key Vault
+```
+
+**Security principle:** `.env` is for local development only. Production secrets should remain in Azure Key Vault and must not be committed to Git.
+
+## 11. Guardrails
+
+| Boundary | Automated behaviour |
+|---|---|
+| DNC blocked/unknown | Do not dial; record decision |
+| Consent declined | Stop collection and end politely |
+| Advice requested | No recommendation; offer human handoff |
+| Payment/card mentioned | Stop voice capture; do not retain payment value; hand off |
+| Customer says “stop calling” | End immediately and suppress recovery |
+| Low confidence/confusion | Do not invent data; confirm or escalate |
+
+## 12. Demo Narrative
+
+```text
+Customer drops journey
+        ↓
+AI initiates governed recovery
+        ↓
+Missing information is captured
+        ↓
+Sensitive exceptions go to a human
+        ↓
+Operator approves
+        ↓
+Journey is completed
+        ↓
+Management sees operational evidence
+```
+
+## 13. Demo Scenarios
+
+- Successful recovery and test submission
+- Recording/consent decline
+- Advice request → human handoff
+- Payment mention → protected handoff
+- Customer says “stop calling” → immediate termination
+- Confusion or low confidence → human escalation
+
+## 14. Local Setup
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python -m backend.app.main
+```
+
+Open `http://127.0.0.1:8000`.
+
+For local Twilio testing:
+
+```powershell
+ngrok http 8000
+```
+
+## 15. Required Credentials
+
+Keep local values in `.env` for development and use Azure Key Vault for production.
 
 ```text
 MONGO_URI
@@ -50,51 +198,26 @@ TEMPORAL_API
 TEMPORAL_NAMESPACE
 TEMPORAL_ID
 AZURE_API_KEY
-AZURE_ENDPOINT or AZURE_OPENAI_ENDPOINT
+AZURE_ENDPOINT
 AZURE_LLM_MODEL
 TINYFISH_API
 ```
 
-## Run Locally
+## 16. Repository Structure
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-python -m backend.app.main
+```text
+backend/                  FastAPI + voice workflow
+frontend/                 Operator dashboard
+infra/                    Azure infrastructure
+scripts/                  Azure deployment + Twilio configuration
+docs/doc3_assets/         Product screenshots
+test/                     Integration tests
+testing transcripts/      Workflow test evidence
+.github/workflows/        CI/CD
 ```
 
-Open `http://127.0.0.1:8000`.
+## 17. Outcome
 
-## Connect Twilio Locally
+CIMEnergy combines **voice automation, durable workflows, deterministic guardrails, human approval, and Azure enterprise deployment** to turn abandoned Energy journeys into controlled recovery opportunities.
 
-```powershell
-ngrok http 8000
-```
-
-Set `PUBLIC_BASE_URL` to the ngrok HTTPS URL, restart the app, then sync Twilio:
-
-```powershell
-Invoke-RestMethod -Method Post -Uri "http://127.0.0.1:8000/api/ops/configure-twilio"
-```
-
-## Deploy To Azure
-
-```powershell
-az login
-az account set --subscription "<subscription-id-or-name>"
-.\scripts\deploy-azure.ps1 -ResourceGroup rg-cimenergy-hackathon -Location australiaeast -AppName cimenergy
-```
-
-Azure Container Apps hosts the UI and API. ACR stores the Docker image. Key Vault stores secrets. The deployment script updates `PUBLIC_BASE_URL` and can sync Twilio.
-
-## Demo Flow
-
-1. Open the Azure app URL.
-2. Start a laptop voice call or call the Twilio number.
-3. Give consent and answer the energy form questions.
-4. Ask a normal process question to show conversation depth.
-5. Ask for payment or advice to show guardrails.
-6. Review and approve the TinyFish draft.
-7. Open Calls to play and download audio.
-8. Download the KPI PDF report.
+> Prototype uses synthetic/test data and test numbers. It does not collect payment credentials or provide product/financial advice.
