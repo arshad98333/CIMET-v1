@@ -1,0 +1,38 @@
+{
+  "type": "Settings",
+  "audio": {
+    "input": {
+      "encoding": "linear16",
+      "sample_rate": 48000
+    },
+    "output": {
+      "encoding": "linear16",
+      "sample_rate": 24000,
+      "container": "none"
+    }
+  },
+  "agent": {
+    "speak": {
+      "provider": {
+        "type": "deepgram",
+        "version": "v1",
+        "model": "aura-2-hyperion-en"
+      }
+    },
+    "listen": {
+      "provider": {
+        "type": "deepgram",
+        "version": "v2",
+        "model": "flux-general-en"
+      }
+    },
+    "think": {
+      "provider": {
+        "type": "google",
+        "model": "gemini-3.1-flash-lite"
+      },
+      "prompt": ""
+    },
+    "greeting": "Hello! How may I help you?"
+  }
+}
